@@ -9,6 +9,7 @@ public:
   bool Init();
   void MainLoop();
 
+  void SetExit(bool isexit) { _proexit = isexit; }
   bool IsExit();
 
 private:
