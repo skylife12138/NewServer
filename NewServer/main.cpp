@@ -28,6 +28,7 @@ int main(int argc,char** argv)
     while(!GProMgr->IsExit())
     {
       GProMgr->MainLoop();
+	  GProMgr->SetExit(IsExit);
     }
     system("pause");
     return 0;
