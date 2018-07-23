@@ -5,7 +5,7 @@
   main.cpp
   Prec.cpp
   正在生成代码...
-gflags_static.lib(gflags.obj) : warning LNK4099: 未找到 PDB“gflags_static.pdb”(使用“gflags_static.lib(gflags.obj)”或在“X:\github\NewServer\Debug\gflags_static.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-gflags_static.lib(gflags_reporting.obj) : warning LNK4099: 未找到 PDB“gflags_static.pdb”(使用“gflags_static.lib(gflags_reporting.obj)”或在“X:\github\NewServer\Debug\gflags_static.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-gflags_static.lib(gflags_completions.obj) : warning LNK4099: 未找到 PDB“gflags_static.pdb”(使用“gflags_static.lib(gflags_completions.obj)”或在“X:\github\NewServer\Debug\gflags_static.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-  NewServer.vcxproj -> X:\github\NewServer\Debug\NewServer.exe
+gflags_static.lib(gflags.obj) : warning LNK4099: 未找到 PDB“gflags_static.pdb”(使用“gflags_static.lib(gflags.obj)”或在“D:\github\NewServer\Debug\gflags_static.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+gflags_static.lib(gflags_reporting.obj) : warning LNK4099: 未找到 PDB“gflags_static.pdb”(使用“gflags_static.lib(gflags_reporting.obj)”或在“D:\github\NewServer\Debug\gflags_static.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+gflags_static.lib(gflags_completions.obj) : warning LNK4099: 未找到 PDB“gflags_static.pdb”(使用“gflags_static.lib(gflags_completions.obj)”或在“D:\github\NewServer\Debug\gflags_static.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+  NewServer.vcxproj -> D:\github\NewServer\Debug\NewServer.exe
