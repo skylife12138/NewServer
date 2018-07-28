@@ -5,12 +5,14 @@ bool GProjectMgr::Init()
 {
     cout << "init" << endl;
     _proexit = false;
+	GTimeMgr::StaticInit();
+
 	return true;
 }
 
 void GProjectMgr::MainLoop()
 {
-    cout << "mainLoop" << endl;
+	GTimeMgr::Instance()->TimeTick();
 }
 
 bool GProjectMgr::IsExit()

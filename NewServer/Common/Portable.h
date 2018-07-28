@@ -114,7 +114,7 @@ const unsigned PtrSize = sizeof(void*);
 typedef char int8;
 typedef short int16;
 typedef int int32;
-typedef unsigned char int8;
+//typedef unsigned char int8;
 typedef unsigned short uint16;
 typedef unsigned int uint32;
 typedef unsigned char byte;

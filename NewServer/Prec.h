@@ -9,11 +9,13 @@
 
 using namespace std;
 #include"main.h"
+#include "./Logic/Define.h"
 #include"./Logic/Person.h"
 #include"./Logic/ProjectManger.h"
 #include"./Logic/Reflector.h"
-#include"./Logic/SingleTon.h"
 
 #include "./Common/Common.h"
-
+#include "./Common/Portable.h"
+#include "./Common/GTimer.h"
+#include "./Common/Lock.h"
 #endif

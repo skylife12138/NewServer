@@ -34,6 +34,12 @@
     <ClCompile Include="Common\Common.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="Common\GTimer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\DynamicPool.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Logic\Person.h">
@@ -58,6 +64,21 @@
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="Common\Portable.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Lock.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Generate.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Define.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DynamicPool.h">
       <Filter>Common</Filter>
     </ClInclude>
   </ItemGroup>

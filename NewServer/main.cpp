@@ -11,6 +11,12 @@ void EndFun(int n)
 		cout << "Error: Unknown Signal "<<n << endl;
 }
 
+void test()
+{
+	TestDelayTime* Test = new TestDelayTime();
+	GTimeMgr::Instance()->CreateDelayTimer(10, Test);
+}
+
 int main(int argc,char** argv)
 {
 	gflags::SetUsageMessage("GameServer");
@@ -25,8 +31,11 @@ int main(int argc,char** argv)
 		cout << "Project Init Error!" << endl;
 		return 1;
 	}
+	test();
+	DWORD NowSecond = GTimeMgr::Instance()->GetNowTimeStamp();
     while(!GProMgr->IsExit())
     {
+	  NowSecond = GTimeMgr::Instance()->GetNowTimeStamp();
       GProMgr->MainLoop();
 	  GProMgr->SetExit(IsExit);
     }
