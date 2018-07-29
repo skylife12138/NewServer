@@ -1,18 +1,19 @@
 #include"Prec.h"
 GProjectMgr* GProMgr;
+GTimeMgr* GTimer;
 
 bool GProjectMgr::Init()
 {
     cout << "init" << endl;
     _proexit = false;
-	GTimeMgr::StaticInit();
+	GTimer = new GTimeMgr();
 
 	return true;
 }
 
 void GProjectMgr::MainLoop()
 {
-	GTimeMgr::Instance()->TimeTick();
+	GTimer->TimeTick();
 }
 
 bool GProjectMgr::IsExit()

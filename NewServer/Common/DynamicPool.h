@@ -1,6 +1,26 @@
 #ifndef _DYNAMICPOOL_H_
 #define _DYNAMICPOOL_H_
-#include<queue>
+#include<deque>
+#include "Portable.h"
+#include "Lock.h"
+#include "Common.h"
+#include<iostream>
+
+class LockMeta;
+class FakeLock:public LockMeta
+{
+public:
+	FakeLock() {};
+	~FakeLock() {};
+	void Lock() {}
+	void UnLock() {}
+	void Release()
+	{
+		if (this)
+			delete this;
+	}
+};
+
 
 template<class T>
 class ShellT:public T
@@ -31,8 +51,29 @@ private:
 	LockMeta* _AllLock;
 	LockMeta* _FreeLock;
 
-	std::queue<ShellT*> _AllMollocList;
-	std::queue<ShellT*> _FreeMollocList;
+	std::deque<ShellT<T>*> _AllMollocList;
+	std::deque<ShellT<T>*> _FreeMollocList;
+};
+
+//以下为测试代码
+
+class TestObj
+{
+public:
+	TestObj() {}
+	~TestObj() {}
+
+	void Init() { std::cout << "test dynamicpool" << std::endl; }
+};
+
+class TestDyPool
+{
+public:
+	TestDyPool();
+	~TestDyPool() {}
+	TestObj* Fetch();
+private:
+	DynamicPool<TestObj> ObjPool;
 };
 
 #endif

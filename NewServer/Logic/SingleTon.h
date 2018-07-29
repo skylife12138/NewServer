@@ -21,8 +21,8 @@ public:
   }
 protected:
   static T* pInstance;
-  SingleTon(void){}
-  virtual ~SingleTon(void){}
+  SingleTon(){}
+  virtual ~SingleTon(){}
 };
 template <typename T>
 T *SingleTon<T>::pInstance = NULL;

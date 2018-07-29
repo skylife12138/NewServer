@@ -2,6 +2,5 @@
 #define _DEFINE_H_
 #include "Prec.h"
 
-#define GTime GTimeMgr::Instance();
 
 #endif

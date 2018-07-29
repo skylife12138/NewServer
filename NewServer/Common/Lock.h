@@ -69,29 +69,4 @@ private:
 	pthread_mutex_t m_lock;
 #endif
 };
-
-class FakeLock:public LockMeta
-{
-public:
-	FakeLock() {};
-	~FakeLock() {};
-	void Lock() {}
-	void UnLock() {}
-	void Release()
-	{
-		if (this)
-			delete this;
-	}
-};
-
-LockMeta* CreateThreadLock()
-{
-	return new CriticalLock();
-}
-
-LockMeta* CreateFakeLock()
-{
-	return new FakeLock();
-}
-
 #endif

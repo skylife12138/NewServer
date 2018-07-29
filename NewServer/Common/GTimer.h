@@ -2,8 +2,8 @@
 #define _GTIMER_H_
 #include<map>
 #include<set>
-#include"./Logic/SingleTon.h"
-#include "./Common/Portable.h"
+#include "SingleTon.h"
+#include "Portable.h"
 
 const int Max_DelayTimeNum = 10000;
 struct ST
@@ -17,8 +17,8 @@ struct ST
 	int Second;
 };
 
-class DelayTimeBase;
-class GTimeMgr:public SingleTon<GTimeMgr>
+class DelayTimeObject;
+class GTimeMgr
 {
 public:
 	GTimeMgr();
@@ -32,20 +32,29 @@ public:
 
 	int  GetDelayUuid();
 	void FreeDelayUuid(int Uuid);
-	bool CreateDelayTimer(int WaitTime, DelayTimeBase* DelayTime);
-	void AddDelayTimer(int TimeUuid, DelayTimeBase* DelayTime);
+	template<class T> T*  CreateDelayTimer(int WaitTime)
+	{
+		T* DelayTime = new T;
+		int Uuid = GetDelayUuid();
+		if (!DelayTime || Uuid == -1)
+			return false;
+		DelayTime->Init(WaitTime);
+		AddDelayTimer(Uuid, DelayTime);
+		return DelayTime;
+	}
+	void AddDelayTimer(int TimeUuid, DelayTimeObject* DelayTime);
 	void DelDelayTimer(int TimeUuid);
 private:
 	int NowUuidNum;
 	std::set<int> FreeUuid;
 	std::set<int> NeedDel;
-	std::map<int, DelayTimeBase*> DelayDataMap;
+	std::map<int, DelayTimeObject*> DelayDataMap;
 };
 
-class DelayTimeBase
+class DelayTimeObject
 {
 public:
-	DelayTimeBase() :WaitScond(0),TriggerSecond(0) {}
+	DelayTimeObject() :WaitScond(0),TriggerSecond(0) {}
 	void Init(DWORD time);
 	void clear();
 	void ReHook();
@@ -57,7 +66,7 @@ private:
 	DWORD TriggerSecond;//´¥·¢Ê±¿Ì
 };
 
-class TestDelayTime:public DelayTimeBase
+class TestDelayTime:public DelayTimeObject
 {
 public:
 	virtual void Invoke();

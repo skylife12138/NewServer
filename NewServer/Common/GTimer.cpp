@@ -53,17 +53,7 @@ void GTimeMgr::FreeDelayUuid(int Uuid)
 	FreeUuid.insert(Uuid);
 }
 
-bool GTimeMgr::CreateDelayTimer(int WaitTime, DelayTimeBase* DelayTime)
-{
-	int Uuid = GetDelayUuid();
-	if (!DelayTime || Uuid==-1)
-		return false;
-	DelayTime->Init(WaitTime);
-	AddDelayTimer(Uuid, DelayTime);
-	return true;
-}
-
-void GTimeMgr::AddDelayTimer(int TimeUuid, DelayTimeBase* DelayTime)
+void GTimeMgr::AddDelayTimer(int TimeUuid, DelayTimeObject* DelayTime)
 {
 	if (!DelayTime)
 		return;
@@ -87,7 +77,7 @@ void GTimeMgr::TimeTick()
 {
 	for (auto iter = DelayDataMap.begin();iter != DelayDataMap.end();++iter)
 	{
-		DelayTimeBase* DelayTimer = iter->second;
+		DelayTimeObject* DelayTimer = iter->second;
 		if (!DelayTimer || GetNowTimeStamp() < DelayTimer->GetTriggerSecond())
 			continue;
 		DelayTimer->Invoke();
@@ -126,7 +116,7 @@ void GTimeMgr::GetSystemTime(ST& TimeData,DWORD TimeStamp)
 {
 	tm TempData;
     time_t NowRealTime = TimeStamp? TimeStamp:time(NULL);
-	TempData = *localtime(&NowRealTime);
+	localtime_s(&TempData,&NowRealTime);
 	
 	TimeData.Year = TempData.tm_year;
 	TimeData.Month = TempData.tm_mon;
@@ -151,19 +141,19 @@ DWORD GTimeMgr::MakeTime(ST& TimeData)
 	return (DWORD)mktime(&TempData);
 }
 
-void DelayTimeBase::Init(DWORD time)
+void DelayTimeObject::Init(DWORD time)
 {
 	WaitScond = time;
 	TriggerSecond = GetNowTime() + WaitScond;
 }
 
-void DelayTimeBase::clear()
+void DelayTimeObject::clear()
 {
 	WaitScond = 0;
 	TriggerSecond = 0;
 }
 
-void DelayTimeBase::ReHook()
+void DelayTimeObject::ReHook()
 {
 	TriggerSecond = GetNowTime() + WaitScond;
 }
@@ -171,5 +161,5 @@ void DelayTimeBase::ReHook()
 void TestDelayTime::Invoke()
 {
 	std::cout << "TestDelayTime" << std::endl;
-	//ReHook();
+	ReHook();
 }
