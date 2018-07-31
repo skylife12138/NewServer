@@ -72,6 +72,7 @@ public:
 	TestDyPool();
 	~TestDyPool() {}
 	TestObj* Fetch();
+	void Relase(TestObj* obj);
 private:
 	DynamicPool<TestObj> ObjPool;
 };

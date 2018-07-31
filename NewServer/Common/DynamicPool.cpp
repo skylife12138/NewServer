@@ -97,7 +97,7 @@ void DynamicPool<T>::ReleaseObj(T* pObj)
 	if (!pObj)
 		return;
 	_FreeLock->Lock();
-	ShellT* pShellT = static_cast<ShellT*>(pObj);
+	ShellT<T>* pShellT = static_cast<ShellT<T>*>(pObj);
 	if (!pShellT)
 	{
 		_FreeLock->UnLock();
@@ -109,7 +109,7 @@ void DynamicPool<T>::ReleaseObj(T* pObj)
 		return;
 	}
 	pShellT->UseCount--;
-	_FreeMollocList->push_back(pShellT);
+	_FreeMollocList.push_back(pShellT);
 	_FreeLock->UnLock();
 }
 
@@ -160,4 +160,9 @@ TestDyPool::TestDyPool()
 TestObj* TestDyPool::Fetch()
 {
    return ObjPool.FetchObj();
+}
+
+void TestDyPool::Relase(TestObj* obj)
+{
+	ObjPool.ReleaseObj(obj);
 }

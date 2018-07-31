@@ -16,14 +16,19 @@ void test()
 {
 	TestDelayTime* t = GTimer->CreateDelayTimer<TestDelayTime>(10);
 	TestDyPool DPool;
-	int count = 10000000;
+	int count = 10000;
 	while (count)
 	{
 		cout << count;
 		TestObj* obj = DPool.Fetch();
 		if (obj)
+		{
 			obj->Init();
-		count--;
+			cout << sizeof(obj) << endl;
+			DPool.Relase(obj);
+			count--;
+		}
+
 	}
 }
 
