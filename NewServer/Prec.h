@@ -14,8 +14,5 @@ using namespace std;
 #include"./Logic/ProjectManger.h"
 #include"./Logic/Reflector.h"
 
-#include "./Common/Common.h"
 #include "./Common/Portable.h"
-#include "./Common/GTimer.h"
-#include "./Common/Lock.h"
 #endif

@@ -1,6 +1,7 @@
 #include "Prec.h"
 #include "gflags/gflags.h"
 #include <signal.h>
+#include "DynamicPool.h"
 
 int IsExit = true;
 void EndFun(int n)
@@ -13,8 +14,17 @@ void EndFun(int n)
 
 void test()
 {
-	TestDelayTime* Test = new TestDelayTime();
-	GTimeMgr::Instance()->CreateDelayTimer(10, Test);
+	TestDelayTime* t = GTimer->CreateDelayTimer<TestDelayTime>(10);
+	TestDyPool DPool;
+	int count = 10000000;
+	while (count)
+	{
+		cout << count;
+		TestObj* obj = DPool.Fetch();
+		if (obj)
+			obj->Init();
+		count--;
+	}
 }
 
 int main(int argc,char** argv)
@@ -31,14 +41,16 @@ int main(int argc,char** argv)
 		cout << "Project Init Error!" << endl;
 		return 1;
 	}
+	//测试代码开始
 	test();
-	DWORD NowSecond = GTimeMgr::Instance()->GetNowTimeStamp();
-    while(!GProMgr->IsExit())
-    {
-	  NowSecond = GTimeMgr::Instance()->GetNowTimeStamp();
-      GProMgr->MainLoop();
-	  GProMgr->SetExit(IsExit);
-    }
-    system("pause");
-    return 0;
+	//测试代码结束
+	DWORD NowSecond = GTimer->GetNowTimeStamp();
+	while (!GProMgr->IsExit())
+	{
+		NowSecond = GTimer->GetNowTimeStamp();
+		GProMgr->MainLoop();
+		GProMgr->SetExit(IsExit);
+	}
+	system("pause");
+	return 0;
 }

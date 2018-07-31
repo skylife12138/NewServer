@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{ab6b1151-d41a-4383-9b48-da1e55209399}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic">
+      <UniqueIdentifier>{f2792efc-82f9-4fe8-a642-31075ce85817}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mian">
+      <UniqueIdentifier>{aed0c876-64c6-4466-9ea6-b33353ecd76a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\Common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\DynamicPool.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GTimer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Person.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\ProjectManger.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Reflector.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Mian</Filter>
+    </ClCompile>
+    <ClCompile Include="Prec.cpp">
+      <Filter>Mian</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DynamicPool.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Generate.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Lock.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Portable.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Define.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Person.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\ProjectManger.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Reflector.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\SingleTon.h">
+      <Filter>Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Mian</Filter>
+    </ClInclude>
+    <ClInclude Include="Prec.h">
+      <Filter>Mian</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

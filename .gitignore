@@ -6,3 +6,12 @@
 /.vs/NewServer/v15/ipch/AutoPCH
 *.suo
 *.db
+*.user
+*.opendb
+*.pdb
+*.ilk
+*.exe
+/NewServer/Debug/NewServer.tlog
+*.obj
+*.log
+*.idb
