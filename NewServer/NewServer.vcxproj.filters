@@ -10,6 +10,9 @@
     <Filter Include="Mian">
       <UniqueIdentifier>{aed0c876-64c6-4466-9ea6-b33353ecd76a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Net">
+      <UniqueIdentifier>{472b2389-e798-4475-be2e-05d0f29c3539}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Common.cpp">
@@ -35,6 +38,12 @@
     </ClCompile>
     <ClCompile Include="Prec.cpp">
       <Filter>Mian</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Thread.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\IoThread.cpp">
+      <Filter>Net</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +85,12 @@
     </ClInclude>
     <ClInclude Include="Prec.h">
       <Filter>Mian</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Thread.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\IoThread.h">
+      <Filter>Net</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

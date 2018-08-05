@@ -32,21 +32,27 @@ public:
 class ThreadHandler
 {
 public:
-	ThreadHandler();
+	ThreadHandler(BaseThread* pThread, bool NeedWaitFor);
 	~ThreadHandler();
 
 	void         Stop();
+	bool         Start();
 	bool         Kill(unsigned int ExitCode);
 	bool         WaitFor(unsigned int WaitTime = 0xffffffff);
 	void         Release();
 	unsigned int GetThreadId() { return _ThreadId; }
 	BaseThread*  GetThread() { return _pThread; }
-	bool         IsStop() {return _IsStop};
+	bool         IsStop() {return _IsStop;}
 
 #ifdef WIN32
 	void*        GetWinHandle() { return _WinHandle; }
 #endif // WIN32
-
+private:
+#ifdef WIN32
+	static unsigned int _stdcall _StaticThreadFunc(void *arg);
+#else
+	static unsigned int _StaticThreadFunc(void  *arg);
+#endif
 private:
 	bool _IsStop;
 	bool _NeedWaitfor;
@@ -59,6 +65,6 @@ private:
 #endif // WIN32
 };
 
-
+bool CreateThreadHandler(BaseThread* pThread, bool NeedWaitFor, ThreadHandler*& pThreadHandler);
 
 #endif

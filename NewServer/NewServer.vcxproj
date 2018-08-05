@@ -22,10 +22,12 @@
     <ClCompile Include="Common\Common.cpp" />
     <ClCompile Include="Common\DynamicPool.cpp" />
     <ClCompile Include="Common\GTimer.cpp" />
+    <ClCompile Include="Common\Thread.cpp" />
     <ClCompile Include="Logic\Person.cpp" />
     <ClCompile Include="Logic\ProjectManger.cpp" />
     <ClCompile Include="Logic\Reflector.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Net\IoThread.cpp" />
     <ClCompile Include="Prec.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -35,12 +37,14 @@
     <ClInclude Include="Common\GTimer.h" />
     <ClInclude Include="Common\Lock.h" />
     <ClInclude Include="Common\Portable.h" />
+    <ClInclude Include="Common\Thread.h" />
     <ClInclude Include="Logic\Define.h" />
     <ClInclude Include="Logic\Person.h" />
     <ClInclude Include="Logic\ProjectManger.h" />
     <ClInclude Include="Logic\Reflector.h" />
     <ClInclude Include="Logic\SingleTon.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="Net\IoThread.h" />
     <ClInclude Include="Prec.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -103,7 +107,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>Prec.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)gflags_win;$(ProjectDir);$(ProjectDir)\Common;$(ProjectDir)\Logic</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Net;$(ProjectDir)gflags_win;$(ProjectDir);$(ProjectDir)\Common;$(ProjectDir)\Logic</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
