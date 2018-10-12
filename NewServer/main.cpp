@@ -33,6 +33,8 @@ void test()
 	}
 }
 
+const int iRecvTimeOut = 5000; //zmq接收超时时间(毫秒)
+const char *pAddr = "tcp://*:5547";
 int main(int argc,char** argv)
 {
 	gflags::SetUsageMessage("GameServer");
@@ -40,18 +42,43 @@ int main(int argc,char** argv)
 	signal(SIGINT, EndFun);
 	signal(SIGTERM, EndFun);
 
-    GProMgr = new GProjectMgr;
-    bool Ret = GProMgr->Init();
+	GProMgr = new GProjectMgr;
+	bool Ret = GProMgr->Init();
 	if (!Ret)
 	{
 		cout << "Project Init Error!" << endl;
-		return 1;
+		return 0;
 	}
+
+	void *pCtx = zmq_ctx_new();
+	if (!pCtx)
+	{
+		cout << "Net New Error!" << endl;
+		return 0;
+	}
+	void *pSock = zmq_socket(pCtx,ZMQ_DEALER);
+	if (!pSock)
+	{
+		cout << "Socket Init Error!" << endl;
+		zmq_ctx_destroy(pCtx);
+		return 0;
+	}
+	if (zmq_setsockopt(pSock, ZMQ_RCVTIMEO, &iRecvTimeOut, sizeof(iRecvTimeOut)) < 0)
+	{
+		zmq_close(pSock);
+		zmq_ctx_destroy(pCtx);
+		return 0;
+	}
+	if (zmq_bind(pSock, pAddr) < 0)
+	{
+		zmq_close(pSock);
+		zmq_ctx_destroy(pCtx);
+		return 0;
+	}
+	cout << "bind at: " << pAddr << endl;
+
 	//测试代码开始
 	//test();
-	int a, b, c;
-	zmq_version(&a, &b, &c);
-	std::cout << "zmq_version:" << a << "_" << b << "_" << c << std::endl;
 	//测试代码结束
 	DWORD NowSecond = GTimer->GetNowTimeStamp();
 	while (!GProMgr->IsExit())
@@ -59,7 +86,15 @@ int main(int argc,char** argv)
 		NowSecond = GTimer->GetNowTimeStamp();
 		GProMgr->MainLoop();
 		GProMgr->SetExit(IsExit);
+
+		char szMsg[1024] = { 0 };
+		errno = 0;
+		if (zmq_recv(pSock, szMsg, sizeof(szMsg), 0) < 0)
+		{
+			cout << "error = " << zmq_strerror(errno) << endl;
+			continue;
+		}
+		cout << "Recveived message: " << szMsg << endl;
 	}
-	system("pause");
 	return 0;
 }

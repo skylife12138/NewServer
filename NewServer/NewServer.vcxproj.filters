@@ -45,6 +45,9 @@
     <ClCompile Include="Net\IoThread.cpp">
       <Filter>Net</Filter>
     </ClCompile>
+    <ClCompile Include="netapi.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\Common.h">
@@ -90,6 +93,9 @@
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="Net\IoThread.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="netapi.h">
       <Filter>Net</Filter>
     </ClInclude>
   </ItemGroup>

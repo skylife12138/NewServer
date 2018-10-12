@@ -27,6 +27,7 @@
     <ClCompile Include="Logic\ProjectManger.cpp" />
     <ClCompile Include="Logic\Reflector.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="netapi.cpp" />
     <ClCompile Include="Net\IoThread.cpp" />
     <ClCompile Include="Prec.cpp" />
   </ItemGroup>
@@ -44,6 +45,7 @@
     <ClInclude Include="Logic\Reflector.h" />
     <ClInclude Include="Logic\SingleTon.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="netapi.h" />
     <ClInclude Include="Net\IoThread.h" />
     <ClInclude Include="Prec.h" />
   </ItemGroup>
