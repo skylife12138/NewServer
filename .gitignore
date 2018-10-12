@@ -18,3 +18,4 @@
 *.json
 *.sqlite
 *.sqlite-journal
+/NewServer/Release/NewServer.tlog

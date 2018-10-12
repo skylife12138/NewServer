@@ -2,6 +2,7 @@
 #include "gflags/gflags.h"
 #include <signal.h>
 #include "DynamicPool.h"
+#include "zmq.h"
 
 int IsExit = true;
 void EndFun(int n)
@@ -47,7 +48,10 @@ int main(int argc,char** argv)
 		return 1;
 	}
 	//测试代码开始
-	test();
+	//test();
+	int a, b, c;
+	zmq_version(&a, &b, &c);
+	std::cout << "zmq_version:" << a << "_" << b << "_" << c << std::endl;
 	//测试代码结束
 	DWORD NowSecond = GTimer->GetNowTimeStamp();
 	while (!GProMgr->IsExit())

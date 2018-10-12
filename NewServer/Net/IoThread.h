@@ -20,7 +20,7 @@ public:
 
 	UINT32 GetThreadId();
 
-#ifdef WIN32
+#ifdef _WIN32
 	HANDLE GetHandle();
 	HANDLE I_CompletionPort;
 #endif

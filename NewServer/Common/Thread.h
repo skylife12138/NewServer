@@ -1,7 +1,7 @@
 #ifndef _THREAD_H_
 #define _THREAD_H_
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <Windows.h>
 #include <process.h>
 
@@ -20,7 +20,7 @@
 #include <errno.h>
 #include <netinet/in.h>
 #include <execinfo.h>
-#endif // WIN32
+#endif // _WIN32
 
 class BaseThread
 {
@@ -44,11 +44,11 @@ public:
 	BaseThread*  GetThread() { return _pThread; }
 	bool         IsStop() {return _IsStop;}
 
-#ifdef WIN32
+#ifdef _WIN32
 	void*        GetWinHandle() { return _WinHandle; }
-#endif // WIN32
+#endif // _WIN32
 private:
-#ifdef WIN32
+#ifdef _WIN32
 	static unsigned int _stdcall _StaticThreadFunc(void *arg);
 #else
 	static unsigned int _StaticThreadFunc(void  *arg);
@@ -57,12 +57,12 @@ private:
 	bool _IsStop;
 	bool _NeedWaitfor;
 	BaseThread* _pThread;
-#ifdef WIN32
+#ifdef _WIN32
 	unsigned int _ThreadId;
 	void* _WinHandle;
 #else
 	pthread_t _ThreadId;
-#endif // WIN32
+#endif // _WIN32
 };
 
 bool CreateThreadHandler(BaseThread* pThread, bool NeedWaitFor, ThreadHandler*& pThreadHandler);

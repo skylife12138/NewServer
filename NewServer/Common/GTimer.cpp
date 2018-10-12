@@ -1,10 +1,10 @@
 #include "GTimer.h"
 #include <iostream>
-#ifdef WIN32
+#ifdef _WIN32
 #include <time.h>
 #else
 #include <sys/time.h>
-#endif // WIN32
+#endif // _WIN32
 
 DWORD GetNowTime()
 {
@@ -102,11 +102,11 @@ DWORD GTimeMgr::GetNowTimeStamp()
 DWORD GTimeMgr::GetTimeStampFromStr(const char* TimeStr)
 {
 	tm TempData;
-#ifdef WIN32
+#ifdef _WIN32
 	sscanf_s(TimeStr,"%4d-%2d-%2d %2d:%2d:%2d",
 #else
 	sscanf(TimeStr, "%4d-%2d-%2d %2d:%2d:%2d",
-#endif // WIN32
+#endif // _WIN32
 		&TempData.tm_year,&TempData.tm_mon, &TempData.tm_mday, &TempData.tm_hour, &TempData.tm_min, &TempData.tm_sec);
 	TempData.tm_isdst = 0;
 	return (DWORD)mktime(&TempData);

@@ -1,5 +1,5 @@
 #include "./Common/Portable.h"
-#ifdef WIN32
+#ifdef _WIN32
 #include <objbase.h>
 #else
 #include <uuid/uuid.h>
@@ -7,7 +7,7 @@
 
 int GenUuid()
 {
-#ifdef WIN32
+#ifdef _WIN32
 	GUID Uuid;
 	CoCreateGuid(&Uuid);//获取的是一个字符串
 #else

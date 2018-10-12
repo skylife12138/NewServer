@@ -2,7 +2,7 @@
 #define _LOCK_H_
 
 #include "Prec.h"
-#ifdef WIN32
+#ifdef _WIN32
 #include <WinSock2.h>
 #else
 #include <pthread.h>
@@ -22,7 +22,7 @@ class CriticalLock:public LockMeta
 public:
 	void operator =(CriticalLock &lock) {} //½ûÖ¹¿½±´
 public:
-#ifdef WIN32
+#ifdef _WIN32
 	CriticalLock()
 	{
 		InitializeCriticalSection(&m_lock);
@@ -63,7 +63,7 @@ public:
 			delete this;
 	}
 private:
-#ifdef WIN32
+#ifdef _WIN32
 	CRITICAL_SECTION m_lock;
 #else
 	pthread_mutex_t m_lock;

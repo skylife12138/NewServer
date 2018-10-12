@@ -6,22 +6,22 @@ ThreadHandler::ThreadHandler(BaseThread* pThread,bool NeedWaitFor)
     _NeedWaitfor = NeedWaitFor;
 	_pThread = pThread;
 	_ThreadId = 0;
-#ifdef WIN32
+#ifdef _WIN32
 	_WinHandle = INVALID_HANDLE_VALUE;
 #endif
 }
 
 ThreadHandler::~ThreadHandler()
 {
-#ifdef WIN32
+#ifdef _WIN32
 	if (_WinHandle != INVALID_HANDLE_VALUE)
-#endif // WIN32
+#endif // _WIN32
 	{
 		unsigned int _ErrorCode = 0;
 		Kill(_ErrorCode);
 	}
 }
-#ifdef WIN32
+#ifdef _WIN32
 unsigned int _stdcall ThreadHandler::_StaticThreadFunc(void *arg)
 {
 	ThreadHandler* pThreadCtr = (ThreadHandler*)arg;
@@ -74,20 +74,20 @@ void ThreadHandler::Stop()
 
 bool ThreadHandler::Start()
 {
-#ifdef WIN32
+#ifdef _WIN32
 	_WinHandle = (HANDLE)_beginthreadex(0, 0, _StaticThreadFunc, this, 0, &_ThreadId);
 	if (!_WinHandle)
 		return false;
 #else
 	if (pthread_create(&_ThreadId, NULL, (void* (*)(void*))_StaticThreadFunc, this))
 		return false;
-#endif // WIN32
+#endif // _WIN32
 	return true;
 }
 
 bool ThreadHandler::Kill(unsigned int ExitCode)
 {
-#ifdef WIN32
+#ifdef _WIN32
 	if (_WinHandle == INVALID_HANDLE_VALUE)
 		return false;
 	if (TerminateThread(_WinHandle, ExitCode))
@@ -100,14 +100,14 @@ bool ThreadHandler::Kill(unsigned int ExitCode)
 #else
 	pthread_cancel(_ThreadId);
 	return true;
-#endif // WIN32
+#endif // _WIN32
 }
 
 bool ThreadHandler::WaitFor(unsigned int WaitTime)
 {
 	if (!_NeedWaitfor)
 		return false;
-#ifdef WIN32
+#ifdef _WIN32
 	if (_WinHandle == INVALID_HANDLE_VALUE)
 		return false;
 	DWORD ret = WaitForSingleObject(_WinHandle, WaitTime);

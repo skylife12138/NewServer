@@ -13,7 +13,7 @@ IoThread::~IoThread()
 
 bool IoThread::Init()
 {
-#ifdef WIN32
+#ifdef _WIN32
 	//windows用完成端口
 	I_CompletionPort = CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, 0, 0);
 	if (I_CompletionPort==NULL)
@@ -56,7 +56,7 @@ void IoThread::Stop()
 	}
 }
 
-#ifdef WIN32
+#ifdef _WIN32
 HANDLE IoThread::GetHandle()
 {
 	return I_CompletionPort;
