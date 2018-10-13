@@ -19,3 +19,4 @@
 *.sqlite
 *.sqlite-journal
 /NewServer/Release/NewServer.tlog
+/TestClient/Debug/TestClient.tlog
