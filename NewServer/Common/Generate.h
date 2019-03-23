@@ -1,3 +1,6 @@
+#ifndef _GENERATE_H_
+#define _GENERATE_H_
+
 #include "./Common/Portable.h"
 #ifdef _WIN32
 #include <objbase.h>
@@ -5,7 +8,7 @@
 #include <uuid/uuid.h>
 #endif
 
-int GenUuid()
+inline int GenUuid()
 {
 #ifdef _WIN32
 	GUID Uuid;
@@ -16,3 +19,5 @@ int GenUuid()
 #endif
 	return 0;
 }
+
+#endif

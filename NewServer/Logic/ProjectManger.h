@@ -17,5 +17,5 @@ private:
 };
 
 extern GProjectMgr* GProMgr;
-extern  class GTimeMgr* GTimer;
+extern  class GlobalTimer* GTimer;
 #endif

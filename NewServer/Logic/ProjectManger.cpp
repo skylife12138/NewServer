@@ -1,19 +1,31 @@
 #include"Prec.h"
 GProjectMgr* GProMgr;
-GTimeMgr* GTimer;
+GlobalTimer* GTimer;
+
+static void* MainAlloc(int size)
+{
+	return malloc(size);
+}
+
+static void MainFree(void* p, int size)
+{
+	free(p);
+}
 
 bool GProjectMgr::Init()
 {
     cout << "init" << endl;
     _proexit = false;
-	GTimer = new GTimeMgr();
+	GTimer = new GlobalTimer(GetNowTime(), MainAlloc, MainFree);
+	if (!GTimer)
+	  return false;
 
 	return true;
 }
 
 void GProjectMgr::MainLoop()
 {
-	GTimer->TimeTick();
+	GTimer->Tick((int)GetNowTime());
 }
 
 bool GProjectMgr::IsExit()

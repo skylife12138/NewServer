@@ -13,9 +13,14 @@ void EndFun(int n)
 		cout << "Error: Unknown Signal "<<n << endl;
 }
 
+static void TestPrint(GlobalTimer* gtimer, GTimerList* t1, void* udata, int size)
+{
+	cout << "testprint right!!!" << endl;
+}
+
 void test()
 {
-	TestDelayTime* t = GTimer->CreateDelayTimer<TestDelayTime>(10);
+	int* udata = GTimer->InitTimer<int>(10, TestPrint, NULL);
 	TestDyPool DPool;
 	int count = 10000;
 	while (count)
@@ -43,8 +48,7 @@ int main(int argc,char** argv)
 	signal(SIGTERM, EndFun);
 
 	GProMgr = new GProjectMgr;
-	bool Ret = GProMgr->Init();
-	if (!Ret)
+	if (!GProMgr)
 	{
 		cout << "Project Init Error!" << endl;
 		return 0;
@@ -87,6 +91,8 @@ int main(int argc,char** argv)
 		GProMgr->MainLoop();
 		GProMgr->SetExit(IsExit);
 
+		int Uuid = GenUuid();
+		cout << Uuid << endl;
 		char szMsg[1024] = { 0 };
 		errno = 0;
 		if (zmq_recv(pSock, szMsg, sizeof(szMsg), 0) < 0)

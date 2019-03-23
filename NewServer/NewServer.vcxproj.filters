@@ -98,5 +98,8 @@
     <ClInclude Include="netapi.h">
       <Filter>Net</Filter>
     </ClInclude>
+    <ClInclude Include="Common\List.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

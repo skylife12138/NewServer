@@ -7,7 +7,7 @@ int main(int argc, char * argv[])
 	void * pSock = NULL;
 	//使用tcp协议进行通信，需要连接的目标机器IP地址为192.168.1.2
 	//通信使用的网络端口 为7766 
-	const char * pAddr = "tcp://192.168.97.118:5547";
+	const char * pAddr = "tcp://192.168.1.7:5547";
 
 	//创建context 
 	if ((pCtx = zmq_ctx_new()) == NULL)

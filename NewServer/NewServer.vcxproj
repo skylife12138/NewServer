@@ -36,6 +36,7 @@
     <ClInclude Include="Common\DynamicPool.h" />
     <ClInclude Include="Common\Generate.h" />
     <ClInclude Include="Common\GTimer.h" />
+    <ClInclude Include="Common\List.h" />
     <ClInclude Include="Common\Lock.h" />
     <ClInclude Include="Common\Portable.h" />
     <ClInclude Include="Common\Thread.h" />

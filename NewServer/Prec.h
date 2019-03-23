@@ -15,4 +15,5 @@ using namespace std;
 #include"./Logic/Reflector.h"
 
 #include "./Common/Portable.h"
+#include "./Common/Generate.h"
 #endif
