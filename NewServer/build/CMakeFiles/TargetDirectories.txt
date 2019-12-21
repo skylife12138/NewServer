@@ -1,0 +1,3 @@
+D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir
+D:/github/NewServer/NewServer/build/CMakeFiles/edit_cache.dir
+D:/github/NewServer/NewServer/build/CMakeFiles/rebuild_cache.dir

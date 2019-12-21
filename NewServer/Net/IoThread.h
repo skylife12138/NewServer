@@ -1,6 +1,6 @@
 #ifndef _IOTHREAD_H_
 #define _IOTHREAD_H_
-#include "Thread.h"
+#include "../Common/Thread.h"
 
 #include <vector>
 #include <set>

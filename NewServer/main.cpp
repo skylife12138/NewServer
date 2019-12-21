@@ -1,7 +1,7 @@
 #include "Prec.h"
-#include "gflags/gflags.h"
+//#include "gflags/gflags_win/gflags/gflags.h"
 #include <signal.h>
-#include "DynamicPool.h"
+#include "./Common/DynamicPool.h"
 #include "zmq.h"
 
 int IsExit = true;
@@ -38,12 +38,12 @@ void test()
 	}
 }
 
-const int iRecvTimeOut = 5000; //zmq接收超时时间(毫秒)
+const int iRecvTimeOut = 5000; //zmq?????????(????)
 const char *pAddr = "tcp://*:5547";
 int main(int argc,char** argv)
 {
-	gflags::SetUsageMessage("GameServer");
-	gflags::ParseCommandLineFlags(&argc, &argv, false);
+	//gflags::SetUsageMessage("GameServer");
+	//gflags::ParseCommandLineFlags(&argc, &argv, false);
 	signal(SIGINT, EndFun);
 	signal(SIGTERM, EndFun);
 
@@ -81,9 +81,9 @@ int main(int argc,char** argv)
 	}
 	cout << "bind at: " << pAddr << endl;
 
-	//测试代码开始
+	//????????
 	//test();
-	//测试代码结束
+	//??????????
 	DWORD NowSecond = GTimer->GetNowTimeStamp();
 	while (!GProMgr->IsExit())
 	{
@@ -92,12 +92,12 @@ int main(int argc,char** argv)
 		GProMgr->SetExit(IsExit);
 
 		int Uuid = GenUuid();
-		cout << Uuid << endl;
+		//cout << Uuid << endl;
 		char szMsg[1024] = { 0 };
 		errno = 0;
 		if (zmq_recv(pSock, szMsg, sizeof(szMsg), 0) < 0)
 		{
-			cout << "error = " << zmq_strerror(errno) << endl;
+			//cout << "error = " << zmq_strerror(errno) << endl;
 			continue;
 		}
 		cout << "Recveived message: " << szMsg << endl;

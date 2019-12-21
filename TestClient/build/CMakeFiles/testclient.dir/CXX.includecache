@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/github/NewServer/TestClient/libzmq/include/zmq.h
+errno.h
+-
+stddef.h
+-
+stdio.h
+-
+winsock2.h
+-
+inttypes.h
+-
+stdint.h
+-
+poll.h
+-
+
+D:/github/NewServer/TestClient/main.cpp
+libzmq/include/zmq.h
+D:/github/NewServer/TestClient/libzmq/include/zmq.h
+iostream
+-
+

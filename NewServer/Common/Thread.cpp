@@ -22,7 +22,7 @@ ThreadHandler::~ThreadHandler()
 	}
 }
 #ifdef _WIN32
-unsigned int _stdcall ThreadHandler::_StaticThreadFunc(void *arg)
+unsigned int __attribute__((__stdcall__)) ThreadHandler::_StaticThreadFunc(void *arg)
 {
 	ThreadHandler* pThreadCtr = (ThreadHandler*)arg;
 	pThreadCtr->_IsStop = false;

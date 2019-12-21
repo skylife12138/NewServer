@@ -1,6 +1,6 @@
 #ifndef PROJECTMANGER_H_
 #define PROJECTMANGER_H_
-#include "GTimer.h"
+#include "../Common/GTimer.h"
 class GProjectMgr
 {
 public:

@@ -1,0 +1,3 @@
+D:/github/NewServer/TestClient/build/CMakeFiles/testclient.dir
+D:/github/NewServer/TestClient/build/CMakeFiles/edit_cache.dir
+D:/github/NewServer/TestClient/build/CMakeFiles/rebuild_cache.dir

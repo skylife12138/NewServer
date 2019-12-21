@@ -1,41 +1,41 @@
-#include "zmq.h"
+#include "libzmq/include/zmq.h"
 #include <iostream>
 
 int main(int argc, char * argv[])
 {
 	void * pCtx = NULL;
 	void * pSock = NULL;
-	//Ê¹ÓÃtcpÐ­Òé½øÐÐÍ¨ÐÅ£¬ÐèÒªÁ¬½ÓµÄÄ¿±ê»úÆ÷IPµØÖ·Îª192.168.1.2
-	//Í¨ÐÅÊ¹ÓÃµÄÍøÂç¶Ë¿Ú Îª7766 
-	const char * pAddr = "tcp://192.168.1.7:5547";
+	//Ê¹ï¿½ï¿½tcpÐ­ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½Å£ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Óµï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½IPï¿½ï¿½Ö·Îª192.168.1.2
+	//Í¨ï¿½ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ë¿ï¿½ Îª7766 
+	const char * pAddr = "tcp://127.0.0.1:5547";
 
-	//´´½¨context 
+	//ï¿½ï¿½ï¿½ï¿½context 
 	if ((pCtx = zmq_ctx_new()) == NULL)
 	{
 		return 0;
 	}
-	//´´½¨socket 
+	//ï¿½ï¿½ï¿½ï¿½socket 
 	if ((pSock = zmq_socket(pCtx, ZMQ_DEALER)) == NULL)
 	{
 		zmq_ctx_destroy(pCtx);
 		return 0;
 	}
 	int iSndTimeout = 5000;// millsecond
-						   //ÉèÖÃ½ÓÊÕ³¬Ê± 
+						   //ï¿½ï¿½ï¿½Ã½ï¿½ï¿½Õ³ï¿½Ê± 
 	if (zmq_setsockopt(pSock, ZMQ_RCVTIMEO, &iSndTimeout, sizeof(iSndTimeout)) < 0)
 	{
 		zmq_close(pSock);
 		zmq_ctx_destroy(pCtx);
 		return 0;
 	}
-	//Á¬½ÓÄ¿±êIP192.168.1.2£¬¶Ë¿Ú7766 
+	//ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½IP192.168.1.2ï¿½ï¿½ï¿½Ë¿ï¿½7766 
 	if (zmq_connect(pSock, pAddr) < 0)
 	{
 		zmq_close(pSock);
 		zmq_ctx_destroy(pCtx);
 		return 0;
 	}
-	//Ñ­»··¢ËÍÏûÏ¢ 
+	//Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ 
 	while (1)
 	{
 		static int i = 0;

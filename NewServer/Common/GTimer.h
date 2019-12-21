@@ -5,7 +5,7 @@
 #include<stddef.h>
 #include<assert.h>
 #include "List.h"
-#include "SingleTon.h"
+#include "../Logic/SingleTon.h"
 #include "Portable.h"
 
 const int Max_DelayTimeNum = 10000;
@@ -50,8 +50,8 @@ public:
 
 	virtual void Invoke() = 0;
 private:
-	DWORD WaitScond; //µÈ´ýÊ±¼ä
-	DWORD TriggerSecond;//´¥·¢Ê±¿Ì
+	DWORD WaitScond; //ï¿½È´ï¿½Ê±ï¿½ï¿½
+	DWORD TriggerSecond;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 };
 
 class GlobalTimer

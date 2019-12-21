@@ -1,7 +1,7 @@
 #ifndef REFLECTOR_H_
 #define REFLECTOR_H_
 
-#include"Prec.h"
+#include"../Prec.h"
 #include"SingleTon.h"
 using namespace std;
 
@@ -30,10 +30,10 @@ private:
   map<string, ObjectFactory*> objectFactories;
 };
 
-//获取反射器实例，全局唯一
+//锟斤拷取锟斤拷锟斤拷锟斤拷实锟斤拷锟斤拷全锟斤拷唯一
 #define GReflectMgr Reflector::Instance()
 
-//需要被反射的类，需要在其对应的 cpp 文件中进行反射声明
+//锟斤拷要锟斤拷锟斤拷锟斤拷锟斤拷啵拷锟揭拷锟斤拷锟斤拷应锟斤拷 cpp 锟侥硷拷锟叫斤拷锟叫凤拷锟斤拷锟斤拷锟斤拷
 #define REFLECT(name)\
 class ObjectFactory_##name : public ObjectFactory{\
 public:\
@@ -51,7 +51,7 @@ public:\
 };\
 Register_##name register_##name;
 
-//根据类名获取对象实例
+//锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷取锟斤拷锟斤拷实锟斤拷
 template<typename T>
 T* getNewInstance(const std::string& className) {
 	return dynamic_cast<T*>(GReflectMgr->getNewInstance(className));

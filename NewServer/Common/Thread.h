@@ -2,6 +2,7 @@
 #define _THREAD_H_
 
 #ifdef _WIN32
+#include <winsock2.h>
 #include <Windows.h>
 #include <process.h>
 
@@ -49,7 +50,7 @@ public:
 #endif // _WIN32
 private:
 #ifdef _WIN32
-	static unsigned int _stdcall _StaticThreadFunc(void *arg);
+	static unsigned int __attribute__((__stdcall__)) _StaticThreadFunc(void *arg);
 #else
 	static unsigned int _StaticThreadFunc(void  *arg);
 #endif
