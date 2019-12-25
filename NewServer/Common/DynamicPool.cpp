@@ -150,7 +150,7 @@ bool DynamicPool<T>::_AllocT(DWORD ASize)
 	return true;
 }
 
-//以下为测试代码
+//鍔ㄦ�佹睜娴嬭瘯
 
 TestDyPool::TestDyPool()
 {

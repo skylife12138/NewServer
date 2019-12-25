@@ -12,7 +12,7 @@ inline int GenUuid()
 {
 #ifdef _WIN32
 	GUID Uuid;
-	CoCreateGuid(&Uuid);//获取的是一个字符串
+	CoCreateGuid(&Uuid);
 #else
 	uuid_t uu;
 	uuid_generate(uu);

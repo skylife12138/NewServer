@@ -1,0 +1,9 @@
+syntax = "proto3";
+package player;
+option optimize_for = LITE_RUNTIME;
+
+message TestProto
+{
+   uint32 id=1;
+   bool isman=2;
+}

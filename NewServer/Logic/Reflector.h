@@ -30,10 +30,10 @@ private:
   map<string, ObjectFactory*> objectFactories;
 };
 
-//��ȡ������ʵ����ȫ��Ψһ
+
 #define GReflectMgr Reflector::Instance()
 
-//��Ҫ��������࣬��Ҫ�����Ӧ�� cpp �ļ��н��з�������
+
 #define REFLECT(name)\
 class ObjectFactory_##name : public ObjectFactory{\
 public:\
@@ -51,7 +51,7 @@ public:\
 };\
 Register_##name register_##name;
 
-//����������ȡ����ʵ��
+
 template<typename T>
 T* getNewInstance(const std::string& className) {
 	return dynamic_cast<T*>(GReflectMgr->getNewInstance(className));

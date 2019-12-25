@@ -1,7 +1,7 @@
 #ifndef _LOCK_H_
 #define _LOCK_H_
 
-#include "Prec.h"
+#include "../Prec.h"
 #ifdef _WIN32
 #include <WinSock2.h>
 #else
@@ -20,7 +20,7 @@ public:
 class CriticalLock:public LockMeta
 {
 public:
-	void operator =(CriticalLock &lock) {} //Ω˚÷πøΩ±¥
+	void operator =(CriticalLock &lock) {} //Á¶ÅÊ≠¢Êã∑Ë¥ù
 public:
 #ifdef _WIN32
 	CriticalLock()

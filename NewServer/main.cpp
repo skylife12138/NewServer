@@ -1,8 +1,12 @@
 #include "Prec.h"
 //#include "gflags/gflags_win/gflags/gflags.h"
 #include <signal.h>
+#include <google/protobuf/util/time_util.h>
 #include "./Common/DynamicPool.h"
 #include "zmq.h"
+#include "./protobuffer/player.pb.h"
+
+using google::protobuf::util::TimeUtil;
 
 int IsExit = true;
 void EndFun(int n)
@@ -38,7 +42,7 @@ void test()
 	}
 }
 
-const int iRecvTimeOut = 5000; //zmq?????????(????)
+const int iRecvTimeOut = 5000; //zmq
 const char *pAddr = "tcp://*:5547";
 int main(int argc,char** argv)
 {
@@ -81,9 +85,13 @@ int main(int argc,char** argv)
 	}
 	cout << "bind at: " << pAddr << endl;
 
-	//????????
+    //定时器测试
 	//test();
-	//??????????
+
+	Player::TestProto TestP;
+	TestP.set_id(1);
+	TestP.set_isman(true);
+
 	DWORD NowSecond = GTimer->GetNowTimeStamp();
 	while (!GProMgr->IsExit())
 	{

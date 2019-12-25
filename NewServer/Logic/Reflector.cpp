@@ -1,4 +1,4 @@
-#include "Prec.h"
+#include "../Prec.h"
 
 Reflector::~Reflector()
 {
@@ -15,7 +15,7 @@ void Reflector::RegisterFactory(const string& className, ObjectFactory *of)
 	map<string, ObjectFactory*>::iterator it = objectFactories.find(className);
 	if (it != objectFactories.end()) 
 	{
-		std::cout << "该类已经存在……" << std::endl;
+		std::cout << "arleady register yet!" << std::endl;
 	}
 	else 
 	{

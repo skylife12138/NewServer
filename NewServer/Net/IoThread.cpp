@@ -14,7 +14,7 @@ IoThread::~IoThread()
 bool IoThread::Init()
 {
 #ifdef _WIN32
-	//windows用完成端口
+	//windows浣跨敤iocp
 	I_CompletionPort = CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, 0, 0);
 	if (I_CompletionPort==NULL)
 		return false;

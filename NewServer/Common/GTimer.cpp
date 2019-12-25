@@ -32,7 +32,6 @@ void TM_SetTimerFunc(GTimerList *t1, GTimerFunc func)
 
 DWORD GetNowTime()
 {
-	//用c库函数精确到秒
 	DWORD NowSeond = (DWORD)time(NULL);
 	return NowSeond;
 }

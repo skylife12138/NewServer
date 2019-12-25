@@ -50,8 +50,8 @@ public:
 
 	virtual void Invoke() = 0;
 private:
-	DWORD WaitScond; //�ȴ�ʱ��
-	DWORD TriggerSecond;//����ʱ��
+	DWORD WaitScond; //定时间隔
+	DWORD TriggerSecond;//下一次触发时间
 };
 
 class GlobalTimer

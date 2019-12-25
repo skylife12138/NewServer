@@ -23,7 +23,6 @@ typedef unsigned int CodeType;
 #pragma comment(lib,"winmm.lib")
 #endif
 #endif
-#include <winsock2.h>
 #include <windows.h>
 #include <fcntl.h>
 

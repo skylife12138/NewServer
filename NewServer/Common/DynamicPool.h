@@ -28,7 +28,7 @@ class ShellT:public T
 public:
 	ShellT():UseCount(0){};
 	~ShellT() {};
-	int UseCount; //记录引用的次数
+	int UseCount; //寮曠敤璁℃暟
 };
 
 template<class T>
@@ -38,7 +38,7 @@ public:
 	explicit DynamicPool();
 	~DynamicPool();
 
-	bool Init(int InitSize,int StepSize,bool IsSingleThread=false,int MaxSize=0);//MaxSize=0表示没有最大限制
+	bool Init(int InitSize,int StepSize,bool IsSingleThread=false,int MaxSize=0);//MaxSize=0
 	T* FetchObj();
 	void ReleaseObj(T* pObj);
 private:
@@ -55,7 +55,7 @@ private:
 	std::deque<ShellT<T>*> _FreeMollocList;
 };
 
-//以下为测试代码
+//娴嬭瘯浠ｇ爜
 
 class TestObj
 {
