@@ -18,5 +18,8 @@
 *.json
 *.sqlite
 *.sqlite-journal
+*.cmake
 /NewServer/Release/NewServer.tlog
 /TestClient/Debug/TestClient.tlog
+/NewServer/NewServer/build/CMakeFiles
+

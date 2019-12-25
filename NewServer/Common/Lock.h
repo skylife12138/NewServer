@@ -69,4 +69,35 @@ private:
 	pthread_mutex_t m_lock;
 #endif
 };
+
+#ifdef _WIN32
+class AtomicNumber
+{
+public:
+	AtomicNumber() { mValue = 0; }
+	long Get() { return mValue; }
+	void Set(int n) { InterlockedExchange(&mValue, n); }
+	void Inc() { InterlockedIncrement(&mValue); }
+	void Dec() { InterlockedDecrement(&mValue); }
+	void Add(int n) { InterlockedExchangeAdd(&mValue, n); }
+	void Sub(int n) { InterlockedExchangeAdd(&mValue, -n); }
+private:
+	volatile long mValue;
+};
+#else
+class AtomicNumber
+{
+public:
+	AtomicNumber() { mValue = 0; }
+	long Get() { return mValue; }
+	void Set(int n) { __sync_lock_test_and_set(&mValue, n); }
+	void Inc() { __sync_add_and_fetch(&mValue,1); }
+	void Dec() { __sync_add_and_fetch(&mValue,1); }
+	void Add(int n) { __sync_add_and_fetch(&mValue, n); }
+	void Sub(int n) { __sync_add_and_fetch(&mValue, -n); }
+private:
+	volatile long mValue;
+};
+#endif
+
 #endif

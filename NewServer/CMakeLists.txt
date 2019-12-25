@@ -19,6 +19,7 @@ set(BUILD_FLAGS "${BUILD_FLAGS} -Wno-enum-compare")
 # 启用预编译头警告
 set(BUILD_FLAGS "${BUILD_FLAGS} -Winvalid-pch")
 
+set(BUILD_FLAGS "${BUILD_FLAGS} -Wno-error")
 ###  指定c++文件时编译选项
 set(CMAKE_CXX_FLAGS ${BUILD_FLAGS})
 add_definitions(-DNDEBUG)
@@ -33,12 +34,14 @@ include_directories(${PROJECT_SOURCE_DIR})
 include_directories(libzmq/include)
 include_directories(gflags/gflags)
 include_directories(gflags/gflags_win/gflags)
+include_directories(google)#protobuffer库头文件路径
 
 
 
 ### 动态链接库或静态链接库的搜索路径
 link_directories(${PROJECT_SOURCE_DIR}/gflags)
 link_directories(${PROJECT_SOURCE_DIR}/libzmq)
+link_directories(${PROJECT_SOURCE_DIR}/protobuffer/lib)
 
 ### 添加库头文件
 set(src_lib_zeromq
@@ -104,6 +107,18 @@ set(src_Logic
 set(src_net
   Net/IoThread.h
   Net/IoThread.cpp
+  Net/MsgFilter.h 
+  Net/MsgFilter.cpp 
+  Net/NetPack.h 
+  Net/NetPack.cpp 
+  Net/NetWorkManger.h 
+  Net/NetWorkManger.cpp 
+)
+
+# protobuf源码文件
+set(src_protobuf
+  protobuffer/player.pb.cc
+  protobuffer/player.pb.h
 )
 
 set(SOURCE_FILES
@@ -113,13 +128,14 @@ set(SOURCE_FILES
   ${src_net}
   ${src_Logic}
   ${src_root}
+  ${src_protobuf}
 )
 
 ### 指定生成的可执行文件目录
-SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}) 
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build) 
 # 指定生成目标
 add_executable(newserver ${SOURCE_FILES})
 #add_gcc_precompiled_header(newserver Prec.h)
 #use_gcc_precompiled_header("${SOURCE_FILES}")
 
-target_link_libraries(newserver libzmq)
+target_link_libraries(newserver libzmq libprotobuf)

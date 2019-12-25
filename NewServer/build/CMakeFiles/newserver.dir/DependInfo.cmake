@@ -12,8 +12,12 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/github/NewServer/NewServer/Logic/ProjectManger.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj"
   "D:/github/NewServer/NewServer/Logic/Reflector.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj"
   "D:/github/NewServer/NewServer/Net/IoThread.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Net/IoThread.cpp.obj"
+  "D:/github/NewServer/NewServer/Net/MsgFilter.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj"
+  "D:/github/NewServer/NewServer/Net/NetPack.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Net/NetPack.cpp.obj"
+  "D:/github/NewServer/NewServer/Net/NetWorkManger.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj"
   "D:/github/NewServer/NewServer/main.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/main.cpp.obj"
   "D:/github/NewServer/NewServer/netapi.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/netapi.cpp.obj"
+  "D:/github/NewServer/NewServer/protobuffer/player.pb.cc" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/protobuffer/player.pb.cc.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -33,6 +37,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../libzmq/include"
   "../gflags/gflags"
   "../gflags/gflags_win/gflags"
+  "../google"
   )
 
 # Targets to which this target links.

@@ -1,12 +1,8 @@
 #include "Prec.h"
 //#include "gflags/gflags_win/gflags/gflags.h"
 #include <signal.h>
-#include <google/protobuf/util/time_util.h>
 #include "./Common/DynamicPool.h"
-#include "zmq.h"
-#include "./protobuffer/player.pb.h"
-
-using google::protobuf::util::TimeUtil;
+#include "../Common/GTimer.h"
 
 int IsExit = true;
 void EndFun(int n)
@@ -57,40 +53,8 @@ int main(int argc,char** argv)
 		cout << "Project Init Error!" << endl;
 		return 0;
 	}
-
-	void *pCtx = zmq_ctx_new();
-	if (!pCtx)
-	{
-		cout << "Net New Error!" << endl;
-		return 0;
-	}
-	void *pSock = zmq_socket(pCtx,ZMQ_DEALER);
-	if (!pSock)
-	{
-		cout << "Socket Init Error!" << endl;
-		zmq_ctx_destroy(pCtx);
-		return 0;
-	}
-	if (zmq_setsockopt(pSock, ZMQ_RCVTIMEO, &iRecvTimeOut, sizeof(iRecvTimeOut)) < 0)
-	{
-		zmq_close(pSock);
-		zmq_ctx_destroy(pCtx);
-		return 0;
-	}
-	if (zmq_bind(pSock, pAddr) < 0)
-	{
-		zmq_close(pSock);
-		zmq_ctx_destroy(pCtx);
-		return 0;
-	}
-	cout << "bind at: " << pAddr << endl;
-
-    //定时器测试
+	//定时器测试
 	//test();
-
-	Player::TestProto TestP;
-	TestP.set_id(1);
-	TestP.set_isman(true);
 
 	DWORD NowSecond = GTimer->GetNowTimeStamp();
 	while (!GProMgr->IsExit())
@@ -100,15 +64,6 @@ int main(int argc,char** argv)
 		GProMgr->SetExit(IsExit);
 
 		int Uuid = GenUuid();
-		//cout << Uuid << endl;
-		char szMsg[1024] = { 0 };
-		errno = 0;
-		if (zmq_recv(pSock, szMsg, sizeof(szMsg), 0) < 0)
-		{
-			//cout << "error = " << zmq_strerror(errno) << endl;
-			continue;
-		}
-		cout << "Recveived message: " << szMsg << endl;
 	}
 	return 0;
 }

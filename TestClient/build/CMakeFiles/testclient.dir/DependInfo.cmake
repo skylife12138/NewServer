@@ -5,12 +5,25 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/github/NewServer/TestClient/main.cpp" "D:/github/NewServer/TestClient/build/CMakeFiles/testclient.dir/main.cpp.obj"
+  "D:/github/NewServer/TestClient/protobuffer/player.pb.cc" "D:/github/NewServer/TestClient/build/CMakeFiles/testclient.dir/protobuffer/player.pb.cc.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "LUA_USE_LINUX"
+  "NDEBUG"
+  "X64"
+  "_REENTRANT"
+  "_USE_PREC"
+  )
+
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "."
+  "../"
   "../libzmq/include"
+  "../google"
   )
 
 # Targets to which this target links.

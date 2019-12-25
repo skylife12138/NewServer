@@ -338,6 +338,87 @@ Net/IoThread.cpp.s:
 	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/IoThread.cpp.s
 .PHONY : Net/IoThread.cpp.s
 
+Net/MsgFilter.obj: Net/MsgFilter.cpp.obj
+
+.PHONY : Net/MsgFilter.obj
+
+# target to build an object file
+Net/MsgFilter.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj
+.PHONY : Net/MsgFilter.cpp.obj
+
+Net/MsgFilter.i: Net/MsgFilter.cpp.i
+
+.PHONY : Net/MsgFilter.i
+
+# target to preprocess a source file
+Net/MsgFilter.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/MsgFilter.cpp.i
+.PHONY : Net/MsgFilter.cpp.i
+
+Net/MsgFilter.s: Net/MsgFilter.cpp.s
+
+.PHONY : Net/MsgFilter.s
+
+# target to generate assembly for a file
+Net/MsgFilter.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/MsgFilter.cpp.s
+.PHONY : Net/MsgFilter.cpp.s
+
+Net/NetPack.obj: Net/NetPack.cpp.obj
+
+.PHONY : Net/NetPack.obj
+
+# target to build an object file
+Net/NetPack.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/NetPack.cpp.obj
+.PHONY : Net/NetPack.cpp.obj
+
+Net/NetPack.i: Net/NetPack.cpp.i
+
+.PHONY : Net/NetPack.i
+
+# target to preprocess a source file
+Net/NetPack.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/NetPack.cpp.i
+.PHONY : Net/NetPack.cpp.i
+
+Net/NetPack.s: Net/NetPack.cpp.s
+
+.PHONY : Net/NetPack.s
+
+# target to generate assembly for a file
+Net/NetPack.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/NetPack.cpp.s
+.PHONY : Net/NetPack.cpp.s
+
+Net/NetWorkManger.obj: Net/NetWorkManger.cpp.obj
+
+.PHONY : Net/NetWorkManger.obj
+
+# target to build an object file
+Net/NetWorkManger.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj
+.PHONY : Net/NetWorkManger.cpp.obj
+
+Net/NetWorkManger.i: Net/NetWorkManger.cpp.i
+
+.PHONY : Net/NetWorkManger.i
+
+# target to preprocess a source file
+Net/NetWorkManger.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.i
+.PHONY : Net/NetWorkManger.cpp.i
+
+Net/NetWorkManger.s: Net/NetWorkManger.cpp.s
+
+.PHONY : Net/NetWorkManger.s
+
+# target to generate assembly for a file
+Net/NetWorkManger.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.s
+.PHONY : Net/NetWorkManger.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -392,6 +473,33 @@ netapi.cpp.s:
 	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/netapi.cpp.s
 .PHONY : netapi.cpp.s
 
+protobuffer/player.pb.obj: protobuffer/player.pb.cc.obj
+
+.PHONY : protobuffer/player.pb.obj
+
+# target to build an object file
+protobuffer/player.pb.cc.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/protobuffer/player.pb.cc.obj
+.PHONY : protobuffer/player.pb.cc.obj
+
+protobuffer/player.pb.i: protobuffer/player.pb.cc.i
+
+.PHONY : protobuffer/player.pb.i
+
+# target to preprocess a source file
+protobuffer/player.pb.cc.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/protobuffer/player.pb.cc.i
+.PHONY : protobuffer/player.pb.cc.i
+
+protobuffer/player.pb.s: protobuffer/player.pb.cc.s
+
+.PHONY : protobuffer/player.pb.s
+
+# target to generate assembly for a file
+protobuffer/player.pb.cc.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/protobuffer/player.pb.cc.s
+.PHONY : protobuffer/player.pb.cc.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -425,12 +533,24 @@ help:
 	@echo ... Net/IoThread.obj
 	@echo ... Net/IoThread.i
 	@echo ... Net/IoThread.s
+	@echo ... Net/MsgFilter.obj
+	@echo ... Net/MsgFilter.i
+	@echo ... Net/MsgFilter.s
+	@echo ... Net/NetPack.obj
+	@echo ... Net/NetPack.i
+	@echo ... Net/NetPack.s
+	@echo ... Net/NetWorkManger.obj
+	@echo ... Net/NetWorkManger.i
+	@echo ... Net/NetWorkManger.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... netapi.obj
 	@echo ... netapi.i
 	@echo ... netapi.s
+	@echo ... protobuffer/player.pb.obj
+	@echo ... protobuffer/player.pb.i
+	@echo ... protobuffer/player.pb.s
 .PHONY : help
 
 

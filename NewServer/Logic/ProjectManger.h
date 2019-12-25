@@ -1,6 +1,6 @@
 #ifndef PROJECTMANGER_H_
 #define PROJECTMANGER_H_
-#include "../Common/GTimer.h"
+
 class GProjectMgr
 {
 public:
@@ -17,5 +17,6 @@ private:
 };
 
 extern GProjectMgr* GProMgr;
-extern  class GlobalTimer* GTimer;
+extern class GlobalTimer* GTimer;
+extern class NewWorkMgr* NetMgr;
 #endif

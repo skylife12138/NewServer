@@ -149,6 +149,33 @@ main.cpp.s:
 	cd /d d:\github\NewServer\TestClient\build && $(MAKE) -f CMakeFiles\testclient.dir\build.make CMakeFiles/testclient.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+protobuffer/player.pb.obj: protobuffer/player.pb.cc.obj
+
+.PHONY : protobuffer/player.pb.obj
+
+# target to build an object file
+protobuffer/player.pb.cc.obj:
+	cd /d d:\github\NewServer\TestClient\build && $(MAKE) -f CMakeFiles\testclient.dir\build.make CMakeFiles/testclient.dir/protobuffer/player.pb.cc.obj
+.PHONY : protobuffer/player.pb.cc.obj
+
+protobuffer/player.pb.i: protobuffer/player.pb.cc.i
+
+.PHONY : protobuffer/player.pb.i
+
+# target to preprocess a source file
+protobuffer/player.pb.cc.i:
+	cd /d d:\github\NewServer\TestClient\build && $(MAKE) -f CMakeFiles\testclient.dir\build.make CMakeFiles/testclient.dir/protobuffer/player.pb.cc.i
+.PHONY : protobuffer/player.pb.cc.i
+
+protobuffer/player.pb.s: protobuffer/player.pb.cc.s
+
+.PHONY : protobuffer/player.pb.s
+
+# target to generate assembly for a file
+protobuffer/player.pb.cc.s:
+	cd /d d:\github\NewServer\TestClient\build && $(MAKE) -f CMakeFiles\testclient.dir\build.make CMakeFiles/testclient.dir/protobuffer/player.pb.cc.s
+.PHONY : protobuffer/player.pb.cc.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,6 +188,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... protobuffer/player.pb.obj
+	@echo ... protobuffer/player.pb.i
+	@echo ... protobuffer/player.pb.s
 .PHONY : help
 
 

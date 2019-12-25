@@ -1,3 +1,3 @@
 "C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\testclient.dir/objects.a
 C:\PROGRA~1\LLVM\bin\ar.exe cr CMakeFiles\testclient.dir/objects.a @CMakeFiles\testclient.dir\objects1.rsp
-C:\PROGRA~1\LLVM\bin\X86_64~2.EXE -g   -Wl,--whole-archive CMakeFiles\testclient.dir/objects.a -Wl,--no-whole-archive  -o ..\testclient.exe -Wl,--out-implib,..\libtestclient.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\testclient.dir\linklibs.rsp
+C:\PROGRA~1\LLVM\bin\X86_64~2.EXE -m64 -pipe -O0 -ggdb3 -std=c++11 -ffloat-store -ffast-math -Wno-invalid-offsetof -Wno-write-strings -Wno-conversion-null -Wno-enum-compare -Winvalid-pch -Wno-error -g   -Wl,--whole-archive CMakeFiles\testclient.dir/objects.a -Wl,--no-whole-archive  -o testclient.exe -Wl,--out-implib,libtestclient.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\testclient.dir\linklibs.rsp
