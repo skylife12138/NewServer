@@ -1,7 +1,6 @@
 #ifndef _NETPACK_H_
 #define _NETPACK_H_
-#include "../Common/common.h"
-#include "../Common/Portable.h"
+#include "../Common/Common.h"
 
 template<typename A>
 struct base_type {typedef A type;};
@@ -19,17 +18,19 @@ struct NetPack
     unsigned short Id;
     unsigned short Size;
     unsigned short Pos;
-    const unsigned short Type;
+    unsigned short Type;
     char Data[0];
 
-    explicit NetPack(unsigned short tp)
+    explicit NetPack(unsigned short t)
     :Ref(0)
     ,Id(0)
     ,Size(0)
     ,Pos(0)
-    ,Type(tp)
+    ,Type(t)
     {
     }
+
+    ~NetPack();
 
     template<typename T>
     NetPack& operator<<(T t)
@@ -186,15 +187,10 @@ extern bool     CheckPackMem(NetPack* p);
 class CNetPackPool:public SingleTon<CNetPackPool>
 {
 public:
-    CNetPackPool();
     ~CNetPackPool();
     NetPack *Pop(int type,unsigned short Id);
     void Push(NetPack* pack);
     void ShowState();
-private:
-    static const int MAX_MSG_ID = 65536;
-    AtomicNumber mMsgNum[MAX_MSG_ID];
-    AtomicNumber mMsgPopNum[MAX_MSG_ID];
 };
 
 #endif

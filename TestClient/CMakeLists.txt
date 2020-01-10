@@ -34,10 +34,16 @@ add_definitions(-DLUA_USE_LINUX)
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 include_directories(${PROJECT_SOURCE_DIR})
 include_directories(libzmq/include)
-include_directories(google)
+include_directories(protobuffer)
+include_directories(libevent/include)#libevent库头文件路径
 
 link_directories(${PROJECT_SOURCE_DIR}/libzmq)
 link_directories(${PROJECT_SOURCE_DIR}/protobuffer/lib)
+link_directories(${PROJECT_SOURCE_DIR}/libevent)
+
+if(WIN32)
+    set(LIBS ${LIBS} ws2_32)#wsock32)
+endif()
 
 set(src_lib_zeromq
   libzmq/include/zmq.h
@@ -68,4 +74,4 @@ SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build)
 # 指定生成目标
 add_executable(testclient ${SOURCE_FILES})
 
-target_link_libraries(testclient libzmq libprotobuf)
+target_link_libraries(testclient ${LIBS} libevent libzmq libprotobuf)

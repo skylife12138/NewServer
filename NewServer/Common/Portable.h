@@ -19,7 +19,8 @@ typedef unsigned int CodeType;
 #define _WINSOCKAPI_
 #ifndef _WINSOCK2API_
 #include <WinSock2.h>
-#pragma comment(lib,"ws2_32.lib")
+#include <mmsystem.h>
+#pragma comment(lib,"ws2_32.lib") //这种为VC专用写法，使用winGW库则直接在cmakelist.txt中链接时加入改库即可
 #pragma comment(lib,"winmm.lib")
 #endif
 #endif

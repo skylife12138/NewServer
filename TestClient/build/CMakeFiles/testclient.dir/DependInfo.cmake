@@ -23,7 +23,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "."
   "../"
   "../libzmq/include"
-  "../google"
+  "../protobuffer"
+  "../libevent/include"
   )
 
 # Targets to which this target links.

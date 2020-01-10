@@ -1,8 +1,9 @@
 #ifndef REFLECTOR_H_
 #define REFLECTOR_H_
 
-#include"../Prec.h"
-#include"SingleTon.h"
+#include <../Prec.h>
+#include "SingleTon.h"
+
 using namespace std;
 
 class ReflectObject
@@ -11,11 +12,11 @@ public:
   virtual ~ReflectObject(){}
 };
 
-class ObjectFactory
+class RObjectFactory
 {
 public:
-  ObjectFactory() { cout << "ObjectFactory()" << endl; }
-  virtual ~ObjectFactory() { cout << "~ObjectFactory" << endl; }
+  RObjectFactory() { cout << "RObjectFactory()" << endl; }
+  virtual ~RObjectFactory() { cout << "~RObjectFactory" << endl; }
   virtual ReflectObject* newInstance() = 0;
 };
 
@@ -24,10 +25,10 @@ class Reflector:public SingleTon<Reflector>
 public:
   Reflector() {};
   ~Reflector();
-  void RegisterFactory(const string &classname, ObjectFactory *of);
+  void RegisterFactory(const string &classname, RObjectFactory *of);
   ReflectObject *getNewInstance(const string& classname);
 private:
-  map<string, ObjectFactory*> objectFactories;
+  map<string, RObjectFactory*> objectFactories;
 };
 
 
@@ -35,7 +36,7 @@ private:
 
 
 #define REFLECT(name)\
-class ObjectFactory_##name : public ObjectFactory{\
+class ObjectFactory_##name : public RObjectFactory{\
 public:\
     ObjectFactory_##name(){ std::cout << "ObjectFactory_" << #name << "()" << std::endl; }\
     virtual ~ObjectFactory_##name(){ std::cout << "~ObjectFactory_" << #name << "()" << std::endl; }\

@@ -21,6 +21,7 @@ ThreadHandler::~ThreadHandler()
 		Kill(_ErrorCode);
 	}
 }
+
 #ifdef _WIN32
 unsigned int __attribute__((__stdcall__)) ThreadHandler::_StaticThreadFunc(void *arg)
 {

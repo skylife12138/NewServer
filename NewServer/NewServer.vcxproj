@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Common.cpp" />
-    <ClCompile Include="Common\DynamicPool.cpp" />
+    <ClCompile Include="Common\MemoryPool.cpp" />
     <ClCompile Include="Common\GTimer.cpp" />
     <ClCompile Include="Common\Thread.cpp" />
     <ClCompile Include="Logic\Person.cpp" />
@@ -33,7 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\Common.h" />
-    <ClInclude Include="Common\DynamicPool.h" />
+    <ClInclude Include="Common\MemoryPool.h" />
     <ClInclude Include="Common\Generate.h" />
     <ClInclude Include="Common\GTimer.h" />
     <ClInclude Include="Common\List.h" />

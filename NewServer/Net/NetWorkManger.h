@@ -1,12 +1,13 @@
 #ifndef _NETWORKMANGER_H_
 #define _NETWORKMANGER_H_
-#include "../libzmq/include/zmq.h"
 #include "../Prec.h"
+
+const int MAX_MSG_LEN = 1024;
 
 class NewWorkMgr
 {
 public:
-    NewWorkMgr():BindPort(5547),pCtx(NULL),pSock(NULL){}
+    NewWorkMgr():BindPort(5548),pCtx(NULL),pSock(NULL){}
     bool NetWorkInit();
     void HandleNetMsg();
 
@@ -15,7 +16,6 @@ private:
     void* pCtx;
     void* pSock;
 };
-
 
 
 #endif

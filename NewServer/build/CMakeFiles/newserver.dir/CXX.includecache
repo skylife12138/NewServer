@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+D:/github/NewServer/NewServer/./Common/GTimer.h
+map
+-
+set
+-
+stddef.h
+-
+assert.h
+-
+List.h
+D:/github/NewServer/NewServer/./Common/List.h
+../Logic/SingleTon.h
+D:/github/NewServer/NewServer/./Logic/SingleTon.h
+Portable.h
+D:/github/NewServer/NewServer/./Common/Portable.h
+
 D:/github/NewServer/NewServer/./Common/Generate.h
 ./Common/Portable.h
 D:/github/NewServer/NewServer/./Common/./Common/Portable.h
@@ -14,10 +30,24 @@ objbase.h
 uuid/uuid.h
 -
 
+D:/github/NewServer/NewServer/./Common/List.h
+linux/types.h
+-
+linux/stddef.h
+-
+linux/poison.h
+-
+linux/const.h
+-
+linux/kernel.h
+-
+
 D:/github/NewServer/NewServer/./Common/Portable.h
 limits.h
 -
 WinSock2.h
+-
+mmsystem.h
 -
 windows.h
 -
@@ -54,15 +84,13 @@ D:/github/NewServer/NewServer/./Logic/Define.h
 ../Prec.h
 D:/github/NewServer/NewServer/./Prec.h
 
-D:/github/NewServer/NewServer/./Logic/Person.h
-Reflector.h
-D:/github/NewServer/NewServer/./Logic/Reflector.h
-
 D:/github/NewServer/NewServer/./Logic/ProjectManger.h
+../Common/Portable.h
+D:/github/NewServer/NewServer/./Common/Portable.h
 
 D:/github/NewServer/NewServer/./Logic/Reflector.h
 ../Prec.h
-D:/github/NewServer/NewServer/./Prec.h
+-
 SingleTon.h
 D:/github/NewServer/NewServer/./Logic/SingleTon.h
 
@@ -70,27 +98,23 @@ D:/github/NewServer/NewServer/./Logic/SingleTon.h
 assert.h
 -
 
-D:/github/NewServer/NewServer/./Net/NetWorkManger.h
-../libzmq/include/zmq.h
-D:/github/NewServer/NewServer/./libzmq/include/zmq.h
-../Prec.h
-D:/github/NewServer/NewServer/./Prec.h
+D:/github/NewServer/NewServer/Common/./ObjectFactory.h
 
-D:/github/NewServer/NewServer/./libzmq/include/zmq.h
-errno.h
+D:/github/NewServer/NewServer/Common/Common.h
+assert.h
 -
-stddef.h
+algorithm
 -
-stdio.h
+iostream
 -
-winsock2.h
--
-inttypes.h
--
-stdint.h
--
-poll.h
--
+Lock.h
+D:/github/NewServer/NewServer/Common/Lock.h
+Portable.h
+D:/github/NewServer/NewServer/Common/Portable.h
+../Logic/SingleTon.h
+D:/github/NewServer/NewServer/Logic/SingleTon.h
+./ObjectFactory.h
+D:/github/NewServer/NewServer/Common/./ObjectFactory.h
 
 D:/github/NewServer/NewServer/Common/Lock.h
 ../Prec.h
@@ -100,10 +124,34 @@ WinSock2.h
 pthread.h
 -
 
+D:/github/NewServer/NewServer/Common/MemoryPool.h
+deque
+-
+Portable.h
+D:/github/NewServer/NewServer/Common/Portable.h
+Lock.h
+D:/github/NewServer/NewServer/Common/Lock.h
+Common.h
+D:/github/NewServer/NewServer/Common/Common.h
+iostream
+-
+
+D:/github/NewServer/NewServer/Common/ObjectFactory.cpp
+ObjectFactory.h
+D:/github/NewServer/NewServer/Common/ObjectFactory.h
+MemoryPool.h
+D:/github/NewServer/NewServer/Common/MemoryPool.h
+../Net/NetPack.h
+D:/github/NewServer/NewServer/Net/NetPack.h
+
+D:/github/NewServer/NewServer/Common/ObjectFactory.h
+
 D:/github/NewServer/NewServer/Common/Portable.h
 limits.h
 -
 WinSock2.h
+-
+mmsystem.h
 -
 windows.h
 -
@@ -136,33 +184,13 @@ string.h
 sys/stat.h
 -
 
-D:/github/NewServer/NewServer/Common/common.h
-assert.h
--
-algorithm
--
-iostream
--
-Lock.h
-D:/github/NewServer/NewServer/Common/Lock.h
-../Logic/SingleTon.h
-D:/github/NewServer/NewServer/Logic/SingleTon.h
-
 D:/github/NewServer/NewServer/Logic/SingleTon.h
 assert.h
 -
 
-D:/github/NewServer/NewServer/Net/NetPack.cpp
-NetPack.h
 D:/github/NewServer/NewServer/Net/NetPack.h
-sstream
--
-
-D:/github/NewServer/NewServer/Net/NetPack.h
-../Common/common.h
-D:/github/NewServer/NewServer/Common/common.h
-../Common/Portable.h
-D:/github/NewServer/NewServer/Common/Portable.h
+../Common/Common.h
+D:/github/NewServer/NewServer/Common/Common.h
 
 D:/github/NewServer/NewServer/Prec.h
 string
@@ -175,12 +203,12 @@ set
 -
 iostream
 -
-main.h
-D:/github/NewServer/NewServer/main.h
+sstream
+-
+assert.h
+-
 ./Logic/Define.h
 D:/github/NewServer/NewServer/./Logic/Define.h
-./Logic/Person.h
-D:/github/NewServer/NewServer/./Logic/Person.h
 ./Logic/ProjectManger.h
 D:/github/NewServer/NewServer/./Logic/ProjectManger.h
 ./Logic/Reflector.h
@@ -189,8 +217,6 @@ D:/github/NewServer/NewServer/./Logic/Reflector.h
 D:/github/NewServer/NewServer/./Common/Portable.h
 ./Common/Generate.h
 D:/github/NewServer/NewServer/./Common/Generate.h
-./Net/NetWorkManger.h
-D:/github/NewServer/NewServer/./Net/NetWorkManger.h
-
-D:/github/NewServer/NewServer/main.h
+./Common/GTimer.h
+D:/github/NewServer/NewServer/./Common/GTimer.h
 

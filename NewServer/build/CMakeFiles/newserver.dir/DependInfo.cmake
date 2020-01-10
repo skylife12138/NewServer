@@ -5,12 +5,17 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/github/NewServer/NewServer/Common/Common.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/Common.cpp.obj"
-  "D:/github/NewServer/NewServer/Common/DynamicPool.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/DynamicPool.cpp.obj"
   "D:/github/NewServer/NewServer/Common/GTimer.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/GTimer.cpp.obj"
+  "D:/github/NewServer/NewServer/Common/MemoryPool.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj"
+  "D:/github/NewServer/NewServer/Common/ObjectFactory.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj"
+  "D:/github/NewServer/NewServer/Common/Portable.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/Portable.cpp.obj"
   "D:/github/NewServer/NewServer/Common/Thread.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/Thread.cpp.obj"
+  "D:/github/NewServer/NewServer/Logic/CPlayer.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj"
+  "D:/github/NewServer/NewServer/Logic/CPlayerRecv.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj"
   "D:/github/NewServer/NewServer/Logic/Person.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Logic/Person.cpp.obj"
   "D:/github/NewServer/NewServer/Logic/ProjectManger.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj"
   "D:/github/NewServer/NewServer/Logic/Reflector.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj"
+  "D:/github/NewServer/NewServer/Net/CClient.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Net/CClient.cpp.obj"
   "D:/github/NewServer/NewServer/Net/IoThread.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Net/IoThread.cpp.obj"
   "D:/github/NewServer/NewServer/Net/MsgFilter.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj"
   "D:/github/NewServer/NewServer/Net/NetPack.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Net/NetPack.cpp.obj"
@@ -35,9 +40,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "."
   "../"
   "../libzmq/include"
-  "../gflags/gflags"
-  "../gflags/gflags_win/gflags"
-  "../google"
+  "../protobuffer"
+  "../libevent/include"
   )
 
 # Targets to which this target links.

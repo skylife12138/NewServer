@@ -2,7 +2,6 @@
 #define PERSON_H_
 #include "Reflector.h"
 
-// ÈÃ Person ¼Ì³Ğ·´Éä»ùÀà
 class Person : public ReflectObject
 {
 public:

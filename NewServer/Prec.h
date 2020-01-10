@@ -6,16 +6,17 @@
 #include<map>
 #include<set>
 #include<iostream>
+#include<sstream>
+#include<assert.h>
 
 using namespace std;
-#include"main.h"
+
 #include"./Logic/Define.h"
-#include"./Logic/Person.h"
 #include"./Logic/ProjectManger.h"
 #include"./Logic/Reflector.h"
 
 #include "./Common/Portable.h"
 #include "./Common/Generate.h"
 
-#include "./Net/NetWorkManger.h"
+#include "./Common/GTimer.h"
 #endif

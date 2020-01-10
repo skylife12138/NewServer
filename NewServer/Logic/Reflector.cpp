@@ -1,8 +1,8 @@
-#include "../Prec.h"
+#include "Reflector.h"
 
 Reflector::~Reflector()
 {
-	map<std::string, ObjectFactory*>::iterator it = objectFactories.begin();
+	map<std::string, RObjectFactory*>::iterator it = objectFactories.begin();
 	for (; it != objectFactories.end();++it)
 	{
 		delete it->second;
@@ -10,9 +10,9 @@ Reflector::~Reflector()
 	objectFactories.clear();
 }
 
-void Reflector::RegisterFactory(const string& className, ObjectFactory *of)
+void Reflector::RegisterFactory(const string& className, RObjectFactory *of)
 {
-	map<string, ObjectFactory*>::iterator it = objectFactories.find(className);
+	map<string, RObjectFactory*>::iterator it = objectFactories.find(className);
 	if (it != objectFactories.end()) 
 	{
 		std::cout << "arleady register yet!" << std::endl;
@@ -25,9 +25,9 @@ void Reflector::RegisterFactory(const string& className, ObjectFactory *of)
 
 ReflectObject* Reflector::getNewInstance(const string& className)
 {
-	map<string, ObjectFactory*>::iterator it = objectFactories.find(className);
+	map<string, RObjectFactory*>::iterator it = objectFactories.find(className);
 	if (it != objectFactories.end()) {
-		ObjectFactory *of = it->second;
+		RObjectFactory *of = it->second;
 		return of->newInstance();
 	}
 	return NULL;

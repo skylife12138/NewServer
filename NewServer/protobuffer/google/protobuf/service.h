@@ -206,7 +206,7 @@ class PROTOBUF_EXPORT RpcController {
   inline RpcController() {}
   virtual ~RpcController();
 
-  // Client-side methods ---------------------------------------------
+  // CClient-side methods ---------------------------------------------
   // These calls may be made from the client side only.  Their results
   // are undefined on the server side (may crash).
 

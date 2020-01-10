@@ -6,7 +6,91 @@
 
 #IncludeRegexTransform: 
 
-..//google/protobuf/any.h
+../libevent/include/event2/buffer.h
+event2/visibility.h
+-
+event2/event-config.h
+-
+stdarg.h
+-
+sys/types.h
+-
+sys/uio.h
+-
+event2/util.h
+-
+
+../libevent/include/event2/bufferevent.h
+event2/visibility.h
+-
+event2/event-config.h
+-
+sys/types.h
+-
+sys/time.h
+-
+event2/util.h
+-
+
+../libevent/include/event2/event-config.h
+
+../libevent/include/event2/event.h
+event2/visibility.h
+-
+event2/event-config.h
+-
+sys/types.h
+-
+sys/time.h
+-
+stdio.h
+-
+event2/util.h
+-
+
+../libevent/include/event2/listener.h
+event2/visibility.h
+-
+event2/event.h
+-
+
+../libevent/include/event2/util.h
+event2/visibility.h
+-
+event2/event-config.h
+-
+sys/time.h
+-
+stdint.h
+-
+inttypes.h
+-
+sys/types.h
+-
+stddef.h
+-
+BaseTsd.h
+-
+stdarg.h
+-
+netdb.h
+-
+winsock2.h
+-
+ws2tcpip.h
+-
+errno.h
+-
+sys/socket.h
+-
+time.h
+-
+
+../libevent/include/event2/visibility.h
+event2/event-config.h
+-
+
+../protobuffer/google/protobuf/any.h
 string
 -
 google/protobuf/stubs/common.h
@@ -20,7 +104,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/arena.h
+../protobuffer/google/protobuf/arena.h
 limits
 -
 type_traits
@@ -44,7 +128,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/arena_impl.h
+../protobuffer/google/protobuf/arena_impl.h
 atomic
 -
 limits
@@ -60,7 +144,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/arenastring.h
+../protobuffer/google/protobuf/arenastring.h
 string
 -
 type_traits
@@ -82,7 +166,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/extension_set.h
+../protobuffer/google/protobuf/extension_set.h
 algorithm
 -
 cassert
@@ -114,7 +198,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/generated_enum_util.h
+../protobuffer/google/protobuf/generated_enum_util.h
 type_traits
 -
 google/protobuf/message_lite.h
@@ -126,7 +210,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/generated_message_table_driven.h
+../protobuffer/google/protobuf/generated_message_table_driven.h
 google/protobuf/map.h
 -
 google/protobuf/map_entry_lite.h
@@ -142,7 +226,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/generated_message_util.h
+../protobuffer/google/protobuf/generated_message_util.h
 assert.h
 -
 atomic
@@ -180,7 +264,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/has_bits.h
+../protobuffer/google/protobuf/has_bits.h
 google/protobuf/stubs/common.h
 -
 google/protobuf/port.h
@@ -190,7 +274,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/implicit_weak_message.h
+../protobuffer/google/protobuf/implicit_weak_message.h
 string
 -
 google/protobuf/io/coded_stream.h
@@ -206,7 +290,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/inlined_string_field.h
+../protobuffer/google/protobuf/inlined_string_field.h
 string
 -
 utility
@@ -220,7 +304,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/io/coded_stream.h
+../protobuffer/google/protobuf/io/coded_stream.h
 assert.h
 -
 atomic
@@ -254,7 +338,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/io/zero_copy_stream.h
+../protobuffer/google/protobuf/io/zero_copy_stream.h
 string
 -
 google/protobuf/stubs/common.h
@@ -264,7 +348,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/map.h
+../protobuffer/google/protobuf/map.h
 initializer_list
 -
 iterator
@@ -290,7 +374,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/map_entry_lite.h
+../protobuffer/google/protobuf/map_entry_lite.h
 assert.h
 -
 string
@@ -320,7 +404,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/map_field_lite.h
+../protobuffer/google/protobuf/map_field_lite.h
 type_traits
 -
 google/protobuf/parse_context.h
@@ -340,7 +424,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/map_type_handler.h
+../protobuffer/google/protobuf/map_type_handler.h
 google/protobuf/parse_context.h
 -
 google/protobuf/io/coded_stream.h
@@ -350,7 +434,7 @@ google/protobuf/arena.h
 google/protobuf/wire_format_lite.h
 -
 
-..//google/protobuf/message_lite.h
+../protobuffer/google/protobuf/message_lite.h
 climits
 -
 string
@@ -374,7 +458,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/metadata_lite.h
+../protobuffer/google/protobuf/metadata_lite.h
 string
 -
 google/protobuf/stubs/common.h
@@ -392,7 +476,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/parse_context.h
+../protobuffer/google/protobuf/parse_context.h
 cstdint
 -
 cstring
@@ -424,15 +508,15 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/port.h
+../protobuffer/google/protobuf/port.h
 google/protobuf/stubs/port.h
 -
 
-..//google/protobuf/port_def.inc
+../protobuffer/google/protobuf/port_def.inc
 
-..//google/protobuf/port_undef.inc
+../protobuffer/google/protobuf/port_undef.inc
 
-..//google/protobuf/repeated_field.h
+../protobuffer/google/protobuf/repeated_field.h
 utility
 -
 algorithm
@@ -464,13 +548,13 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/stubs/casts.h
+../protobuffer/google/protobuf/stubs/casts.h
 type_traits
 -
 google/protobuf/stubs/common.h
 -
 
-..//google/protobuf/stubs/common.h
+../protobuffer/google/protobuf/stubs/common.h
 algorithm
 -
 iostream
@@ -502,7 +586,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/stubs/fastmem.h
+../protobuffer/google/protobuf/stubs/fastmem.h
 stddef.h
 -
 stdio.h
@@ -516,7 +600,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/stubs/hash.h
+../protobuffer/google/protobuf/stubs/hash.h
 string.h
 -
 google/protobuf/stubs/common.h
@@ -526,7 +610,7 @@ unordered_map
 unordered_set
 -
 
-..//google/protobuf/stubs/logging.h
+../protobuffer/google/protobuf/stubs/logging.h
 google/protobuf/stubs/macros.h
 -
 google/protobuf/stubs/port.h
@@ -536,11 +620,11 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/stubs/macros.h
+../protobuffer/google/protobuf/stubs/macros.h
 google/protobuf/stubs/port.h
 -
 
-..//google/protobuf/stubs/once.h
+../protobuffer/google/protobuf/stubs/once.h
 mutex
 -
 utility
@@ -550,13 +634,13 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/stubs/platform_macros.h
+../protobuffer/google/protobuf/stubs/platform_macros.h
 Availability.h
 -
 TargetConditionals.h
 -
 
-..//google/protobuf/stubs/port.h
+../protobuffer/google/protobuf/stubs/port.h
 assert.h
 -
 cstdint
@@ -588,7 +672,7 @@ byteswap.h
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/stubs/stringpiece.h
+../protobuffer/google/protobuf/stubs/stringpiece.h
 assert.h
 -
 stddef.h
@@ -610,7 +694,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/stubs/strutil.h
+../protobuffer/google/protobuf/stubs/strutil.h
 stdlib.h
 -
 vector
@@ -624,7 +708,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-..//google/protobuf/wire_format_lite.h
+../protobuffer/google/protobuf/wire_format_lite.h
 string
 -
 google/protobuf/stubs/common.h
@@ -707,4 +791,14 @@ string
 -
 ./protobuffer/player.pb.h
 D:/github/NewServer/TestClient/./protobuffer/player.pb.h
+../libevent/include/event2/buffer.h
+D:/github/NewServer/libevent/include/event2/buffer.h
+../libevent/include/event2/bufferevent.h
+D:/github/NewServer/libevent/include/event2/bufferevent.h
+../libevent/include/event2/listener.h
+D:/github/NewServer/libevent/include/event2/listener.h
+../libevent/include/event2/util.h
+D:/github/NewServer/libevent/include/event2/util.h
+../libevent/include/event2/event.h
+D:/github/NewServer/libevent/include/event2/event.h
 

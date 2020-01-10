@@ -1,8 +1,8 @@
 #include "Prec.h"
 //#include "gflags/gflags_win/gflags/gflags.h"
 #include <signal.h>
-#include "./Common/DynamicPool.h"
-#include "../Common/GTimer.h"
+#include "./Common/Common.h"
+#include "./Common/MemoryPool.h"
 
 int IsExit = true;
 void EndFun(int n)
@@ -20,26 +20,10 @@ static void TestPrint(GlobalTimer* gtimer, GTimerList* t1, void* udata, int size
 
 void test()
 {
-	int* udata = GTimer->InitTimer<int>(10, TestPrint, NULL);
-	TestDyPool DPool;
-	int count = 10000;
-	while (count)
-	{
-		cout << count;
-		TestObj* obj = DPool.Fetch();
-		if (obj)
-		{
-			obj->Init();
-			cout << sizeof(obj) << endl;
-			DPool.Relase(obj);
-			count--;
-		}
-
-	}
+	
 }
 
-const int iRecvTimeOut = 5000; //zmq
-const char *pAddr = "tcp://*:5547";
+const int MinDeltaTickCount = 1000 / 15;
 int main(int argc,char** argv)
 {
 	//gflags::SetUsageMessage("GameServer");
@@ -55,15 +39,32 @@ int main(int argc,char** argv)
 	}
 	//定时器测试
 	//test();
-
-	DWORD NowSecond = GTimer->GetNowTimeStamp();
+	RealWorldTime = GTimer->GetNowTimeStamp();
+	DWORD LastTickTime = TimeGetTime();
+	int Moredelta = 0;
 	while (!GProMgr->IsExit())
 	{
-		NowSecond = GTimer->GetNowTimeStamp();
-		GProMgr->MainLoop();
-		GProMgr->SetExit(IsExit);
+		NowTickCount = TimeGetTime();
+		RealWorldTime = GTimer->GetNowTimeStamp();
 
-		int Uuid = GenUuid();
+		DWORD DeltaTickCount = NowTickCount - LastTickTime;
+		if((int)DeltaTickCount > MinDeltaTickCount - Moredelta)
+		{
+			GProMgr->MainLoop();
+			GProMgr->SetExit(IsExit);
+
+			LastTickTime = NowTickCount;
+			Moredelta += (DeltaTickCount - MinDeltaTickCount);
+			if(Moredelta > 2*MinDeltaTickCount)
+				Moredelta = 2 * MinDeltaTickCount;
+			else if(Moredelta < 0)
+				Moredelta = 0;
+		}
+		else if((int)DeltaTickCount < MinDeltaTickCount)
+		{
+			SLEEP(MinDeltaTickCount - DeltaTickCount);
+		}
 	}
+	GProMgr->Realase();
 	return 0;
 }

@@ -149,33 +149,6 @@ Common/Common.cpp.s:
 	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/Common.cpp.s
 .PHONY : Common/Common.cpp.s
 
-Common/DynamicPool.obj: Common/DynamicPool.cpp.obj
-
-.PHONY : Common/DynamicPool.obj
-
-# target to build an object file
-Common/DynamicPool.cpp.obj:
-	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/DynamicPool.cpp.obj
-.PHONY : Common/DynamicPool.cpp.obj
-
-Common/DynamicPool.i: Common/DynamicPool.cpp.i
-
-.PHONY : Common/DynamicPool.i
-
-# target to preprocess a source file
-Common/DynamicPool.cpp.i:
-	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/DynamicPool.cpp.i
-.PHONY : Common/DynamicPool.cpp.i
-
-Common/DynamicPool.s: Common/DynamicPool.cpp.s
-
-.PHONY : Common/DynamicPool.s
-
-# target to generate assembly for a file
-Common/DynamicPool.cpp.s:
-	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/DynamicPool.cpp.s
-.PHONY : Common/DynamicPool.cpp.s
-
 Common/GTimer.obj: Common/GTimer.cpp.obj
 
 .PHONY : Common/GTimer.obj
@@ -203,6 +176,87 @@ Common/GTimer.cpp.s:
 	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/GTimer.cpp.s
 .PHONY : Common/GTimer.cpp.s
 
+Common/MemoryPool.obj: Common/MemoryPool.cpp.obj
+
+.PHONY : Common/MemoryPool.obj
+
+# target to build an object file
+Common/MemoryPool.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj
+.PHONY : Common/MemoryPool.cpp.obj
+
+Common/MemoryPool.i: Common/MemoryPool.cpp.i
+
+.PHONY : Common/MemoryPool.i
+
+# target to preprocess a source file
+Common/MemoryPool.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/MemoryPool.cpp.i
+.PHONY : Common/MemoryPool.cpp.i
+
+Common/MemoryPool.s: Common/MemoryPool.cpp.s
+
+.PHONY : Common/MemoryPool.s
+
+# target to generate assembly for a file
+Common/MemoryPool.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/MemoryPool.cpp.s
+.PHONY : Common/MemoryPool.cpp.s
+
+Common/ObjectFactory.obj: Common/ObjectFactory.cpp.obj
+
+.PHONY : Common/ObjectFactory.obj
+
+# target to build an object file
+Common/ObjectFactory.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj
+.PHONY : Common/ObjectFactory.cpp.obj
+
+Common/ObjectFactory.i: Common/ObjectFactory.cpp.i
+
+.PHONY : Common/ObjectFactory.i
+
+# target to preprocess a source file
+Common/ObjectFactory.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.i
+.PHONY : Common/ObjectFactory.cpp.i
+
+Common/ObjectFactory.s: Common/ObjectFactory.cpp.s
+
+.PHONY : Common/ObjectFactory.s
+
+# target to generate assembly for a file
+Common/ObjectFactory.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.s
+.PHONY : Common/ObjectFactory.cpp.s
+
+Common/Portable.obj: Common/Portable.cpp.obj
+
+.PHONY : Common/Portable.obj
+
+# target to build an object file
+Common/Portable.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/Portable.cpp.obj
+.PHONY : Common/Portable.cpp.obj
+
+Common/Portable.i: Common/Portable.cpp.i
+
+.PHONY : Common/Portable.i
+
+# target to preprocess a source file
+Common/Portable.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/Portable.cpp.i
+.PHONY : Common/Portable.cpp.i
+
+Common/Portable.s: Common/Portable.cpp.s
+
+.PHONY : Common/Portable.s
+
+# target to generate assembly for a file
+Common/Portable.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/Portable.cpp.s
+.PHONY : Common/Portable.cpp.s
+
 Common/Thread.obj: Common/Thread.cpp.obj
 
 .PHONY : Common/Thread.obj
@@ -229,6 +283,60 @@ Common/Thread.s: Common/Thread.cpp.s
 Common/Thread.cpp.s:
 	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/Thread.cpp.s
 .PHONY : Common/Thread.cpp.s
+
+Logic/CPlayer.obj: Logic/CPlayer.cpp.obj
+
+.PHONY : Logic/CPlayer.obj
+
+# target to build an object file
+Logic/CPlayer.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj
+.PHONY : Logic/CPlayer.cpp.obj
+
+Logic/CPlayer.i: Logic/CPlayer.cpp.i
+
+.PHONY : Logic/CPlayer.i
+
+# target to preprocess a source file
+Logic/CPlayer.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Logic/CPlayer.cpp.i
+.PHONY : Logic/CPlayer.cpp.i
+
+Logic/CPlayer.s: Logic/CPlayer.cpp.s
+
+.PHONY : Logic/CPlayer.s
+
+# target to generate assembly for a file
+Logic/CPlayer.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Logic/CPlayer.cpp.s
+.PHONY : Logic/CPlayer.cpp.s
+
+Logic/CPlayerRecv.obj: Logic/CPlayerRecv.cpp.obj
+
+.PHONY : Logic/CPlayerRecv.obj
+
+# target to build an object file
+Logic/CPlayerRecv.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj
+.PHONY : Logic/CPlayerRecv.cpp.obj
+
+Logic/CPlayerRecv.i: Logic/CPlayerRecv.cpp.i
+
+.PHONY : Logic/CPlayerRecv.i
+
+# target to preprocess a source file
+Logic/CPlayerRecv.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.i
+.PHONY : Logic/CPlayerRecv.cpp.i
+
+Logic/CPlayerRecv.s: Logic/CPlayerRecv.cpp.s
+
+.PHONY : Logic/CPlayerRecv.s
+
+# target to generate assembly for a file
+Logic/CPlayerRecv.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.s
+.PHONY : Logic/CPlayerRecv.cpp.s
 
 Logic/Person.obj: Logic/Person.cpp.obj
 
@@ -310,6 +418,33 @@ Logic/Reflector.s: Logic/Reflector.cpp.s
 Logic/Reflector.cpp.s:
 	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Logic/Reflector.cpp.s
 .PHONY : Logic/Reflector.cpp.s
+
+Net/CClient.obj: Net/CClient.cpp.obj
+
+.PHONY : Net/CClient.obj
+
+# target to build an object file
+Net/CClient.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/CClient.cpp.obj
+.PHONY : Net/CClient.cpp.obj
+
+Net/CClient.i: Net/CClient.cpp.i
+
+.PHONY : Net/CClient.i
+
+# target to preprocess a source file
+Net/CClient.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/CClient.cpp.i
+.PHONY : Net/CClient.cpp.i
+
+Net/CClient.s: Net/CClient.cpp.s
+
+.PHONY : Net/CClient.s
+
+# target to generate assembly for a file
+Net/CClient.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Net/CClient.cpp.s
+.PHONY : Net/CClient.cpp.s
 
 Net/IoThread.obj: Net/IoThread.cpp.obj
 
@@ -512,15 +647,27 @@ help:
 	@echo ... Common/Common.obj
 	@echo ... Common/Common.i
 	@echo ... Common/Common.s
-	@echo ... Common/DynamicPool.obj
-	@echo ... Common/DynamicPool.i
-	@echo ... Common/DynamicPool.s
 	@echo ... Common/GTimer.obj
 	@echo ... Common/GTimer.i
 	@echo ... Common/GTimer.s
+	@echo ... Common/MemoryPool.obj
+	@echo ... Common/MemoryPool.i
+	@echo ... Common/MemoryPool.s
+	@echo ... Common/ObjectFactory.obj
+	@echo ... Common/ObjectFactory.i
+	@echo ... Common/ObjectFactory.s
+	@echo ... Common/Portable.obj
+	@echo ... Common/Portable.i
+	@echo ... Common/Portable.s
 	@echo ... Common/Thread.obj
 	@echo ... Common/Thread.i
 	@echo ... Common/Thread.s
+	@echo ... Logic/CPlayer.obj
+	@echo ... Logic/CPlayer.i
+	@echo ... Logic/CPlayer.s
+	@echo ... Logic/CPlayerRecv.obj
+	@echo ... Logic/CPlayerRecv.i
+	@echo ... Logic/CPlayerRecv.s
 	@echo ... Logic/Person.obj
 	@echo ... Logic/Person.i
 	@echo ... Logic/Person.s
@@ -530,6 +677,9 @@ help:
 	@echo ... Logic/Reflector.obj
 	@echo ... Logic/Reflector.i
 	@echo ... Logic/Reflector.s
+	@echo ... Net/CClient.obj
+	@echo ... Net/CClient.i
+	@echo ... Net/CClient.s
 	@echo ... Net/IoThread.obj
 	@echo ... Net/IoThread.i
 	@echo ... Net/IoThread.s

@@ -18,7 +18,7 @@
     <ClCompile Include="Common\Common.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="Common\DynamicPool.cpp">
+    <ClCompile Include="Common\MemoryPool.cpp">
       <Filter>Common</Filter>
     </ClCompile>
     <ClCompile Include="Common\GTimer.cpp">
@@ -53,7 +53,7 @@
     <ClInclude Include="Common\Common.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="Common\DynamicPool.h">
+    <ClInclude Include="Common\MemoryPool.h">
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="Common\Generate.h">
