@@ -42,6 +42,7 @@ include_directories(libzmq/include)
 #include_directories(${PROJECT_SOURCE_DIR}/gflags/gflags_win/gflags)
 include_directories(protobuffer)#protobuffer库头文件路径
 include_directories(libevent/include)#libevent库头文件路径
+include_directories(tcmalloc/inlcude)#tcmalloc库头文件路径
 
 
 ### 动态链接库或静态链接库的搜索路径
@@ -49,6 +50,7 @@ link_directories(${PROJECT_SOURCE_DIR}/gflags)
 link_directories(${PROJECT_SOURCE_DIR}/libzmq)
 link_directories(${PROJECT_SOURCE_DIR}/protobuffer/lib)
 link_directories(${PROJECT_SOURCE_DIR}/libevent)
+link_directories(${PROJECT_SOURCE_DIR}/tcmalloc)
 
 if(WIN32)
     set(LIBS ${LIBS} ws2_32)#wsock32)
@@ -141,6 +143,8 @@ set(src_protobuf
   protobuffer/player.pb.h
 )
 
+
+
 set(SOURCE_FILES
   ${src_lib_zeromq}
   ${src_lib_gflags}
@@ -158,4 +162,4 @@ add_executable(newserver ${SOURCE_FILES})
 #add_gcc_precompiled_header(newserver Prec.h)
 #use_gcc_precompiled_header("${SOURCE_FILES}")
 
-target_link_libraries(newserver ${LIBS} libzmq libprotobuf libevent)
+target_link_libraries(newserver ${LIBS} libzmq libprotobuf libevent libtcmalloc_minimal)

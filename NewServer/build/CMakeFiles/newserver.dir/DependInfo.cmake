@@ -42,6 +42,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../libzmq/include"
   "../protobuffer"
   "../libevent/include"
+  "../tcmalloc/inlcude"
   )
 
 # Targets to which this target links.
