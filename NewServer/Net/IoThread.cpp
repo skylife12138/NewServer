@@ -47,12 +47,11 @@ static void Conn_Readcb(struct bufferevent* bev, void *arg)
 static void Conn_Eventcb(struct bufferevent* bev, short events, void *user_data)
 {
 	if(events & BEV_EVENT_EOF)
-		cout << "Connection closed!!!" << endl;
+		Show("Connection closed!!!");
 	else if(events & BEV_EVENT_ERROR)
-		cout << "Error Occur" << strerror(errno) << endl;
+		Error("Error Occur %d", strerror(errno));
 	else if(events & BEV_EVENT_CONNECTED)
-		cout << "CClient Connected Finish!" << endl;
-
+		Show("CClient Connected Finish!");
 }
 
 static void Signal_cb(evutil_socket_t sig, short events, void *user_data)
@@ -71,7 +70,7 @@ static void Listener_cb(struct evconnlistener* listener, evutil_socket_t fd, str
 	bev = bufferevent_socket_new(Io_Thread->base,fd,BEV_OPT_CLOSE_ON_FREE);
 	if(!bev)
 	{
-		cout << "Error constructing bufferevent!" << endl;
+		Error("Error constructing bufferevent!");
 		return;
 	}
 	
@@ -99,8 +98,6 @@ static void Listener_cb(struct evconnlistener* listener, evutil_socket_t fd, str
 
 IoThread::IoThread()
 {
-	I_pThreadHandler = NULL;
-	I_IsStop = false;
 	base = NULL;
 	listener = NULL;
 	singal_event = NULL;
@@ -108,8 +105,6 @@ IoThread::IoThread()
 
 IoThread::~IoThread()
 {
-	I_pThreadHandler = NULL;
-	I_IsStop = false;
 	if(listener)
 		evconnlistener_free(listener);
 	if(singal_event)
@@ -118,57 +113,15 @@ IoThread::~IoThread()
 		event_base_free(base);	
 }
 
-bool IoThread::Init()
-{
-#ifdef _WIN32
-	//windows使用iocp
-	I_CompletionPort = CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, 0, 0);
-	if (I_CompletionPort==NULL)
-		return false;
-	if (!Start())
-		return false;
-	return true;
-#endif
-}
-
-void IoThread::UnInit()
+void IoThread::Release()
 {
 	if (!I_IsStop)
-		Stop();
-}
-
-UINT32 IoThread::GetThreadId()
-{
-	if (I_pThreadHandler)
-		return I_pThreadHandler->GetThreadId();
-	return 0;
-}
-
-bool IoThread::Start()
-{
-	CreateThreadHandler(this, true, I_pThreadHandler);
-	if (!I_pThreadHandler)
-		return false;
-	return true;
-}
-
-void IoThread::Stop()
-{
-	I_IsStop = true;
-	if (I_pThreadHandler)
 	{
-		I_pThreadHandler->WaitFor(3000);
-		I_pThreadHandler->Release();
-		I_pThreadHandler = NULL;
+		event_base_loopexit(base, NULL);//先让libevent退出循环
+		Stop();
 	}
+		
 }
-
-#ifdef _WIN32
-HANDLE IoThread::GetHandle()
-{
-	return I_CompletionPort;
-}
-#endif
 
 void IoThread::SendMsg(TcpConnection* Conn,int size)
 {
@@ -193,12 +146,12 @@ void IoThread::DoThread()
 	base = event_base_new();
 	if(!base)
 	{
-		cout << "Could not initialize libevent!" << endl;
+		Error("Could not initialize libevent!");
 		return;
 	}
 	const char *MethodName = event_base_get_method(base);
 	if(MethodName)
-		cout << "Method Name is " << MethodName << endl;
+		Show("Method Name is %s",MethodName);
 	memset(&sin, 0, sizeof(sin));
 	sin.sin_family = AF_INET;
 	sin.sin_addr.s_addr = INADDR_ANY;
@@ -207,7 +160,7 @@ void IoThread::DoThread()
 	listener = evconnlistener_new_bind(base,Listener_cb,this,LEV_OPT_REUSEABLE|LEV_OPT_CLOSE_ON_FREE,-1,(struct sockaddr*)&sin,sizeof(sin));
 	if(!listener)
 	{
-		cout << "Could not create listener!" << endl;
+		Error("Could not create listener!");
 		return;
 	}
 
@@ -215,11 +168,12 @@ void IoThread::DoThread()
 	struct timeval tv = {10, 0};
 	if(!singal_event || event_add(singal_event,&tv) < 0)
 	{
-		cout << "Could not create/add a signal event!" << endl;
+		Error("Could not create/add a signal event!");
 		return;
 	}
-	cout << "IoThread Id = " << GetThreadId() << endl;
+	Show("IoThread Id = %d", GetThreadId());
 	event_base_dispatch(base);
+	Show("IoThread Release.");
 
 #endif
 }

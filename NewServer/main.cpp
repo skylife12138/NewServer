@@ -3,6 +3,10 @@
 #include <signal.h>
 #include "./Common/Common.h"
 #include "./Common/MemoryPool.h"
+#include "./Logic/CJsonLog.h"
+#if USE_TCMALLOC
+#include <gperftools/malloc_extension.h>
+#endif
 
 int IsExit = true;
 void EndFun(int n)
@@ -10,17 +14,31 @@ void EndFun(int n)
 	if (n == SIGINT || n == SIGTERM)
 		IsExit = false;
 	else
-		cout << "Error: Unknown Signal "<<n << endl;
+		Error("Error: Unknown Signal %d",n);
 }
 
 static void TestPrint(GlobalTimer* gtimer, GTimerList* t1, void* udata, int size)
 {
-	cout << "testprint right!!!" << endl;
+	Show("testprint right!!!");
 }
 
-void test()
+void ShowTCMolloc()
 {
-	
+#if USE_TCMALLOC
+	MallocExtension *ext = MallocExtension::instance();
+	if(!ext)
+		return;
+	char buf[1024 * 4];
+	ext->GetStats(buf,sizeof(buf));
+	Show("buf");
+#endif
+}
+
+void TestJsonLog()
+{
+	CJsonLog JsonLog;
+	JsonLog["name"] = "skylife";
+	JsonLog.WriteJsonLog(EJLT_First);
 }
 
 const int MinDeltaTickCount = 1000 / 15;
@@ -32,20 +50,20 @@ int main(int argc,char** argv)
 	signal(SIGTERM, EndFun);
 
 	GProMgr = new GProjectMgr;
-	if (!GProMgr)
+	if (!GProMgr->Init())
 	{
-		cout << "Project Init Error!" << endl;
+		Error("Project Init Error!");
 		return 0;
 	}
 	//定时器测试
-	//test();
-	RealWorldTime = GTimer->GetNowTimeStamp();
+	ShowTCMolloc();
 	DWORD LastTickTime = TimeGetTime();
 	int Moredelta = 0;
-	while (!GProMgr->IsExit())
+	while (!GProMgr->IsExit() && NowTickCount<8573888)
 	{
 		NowTickCount = TimeGetTime();
 		RealWorldTime = GTimer->GetNowTimeStamp();
+		GTimer->GetSystemTime(NowSystemTime,RealWorldTime);
 
 		DWORD DeltaTickCount = NowTickCount - LastTickTime;
 		if((int)DeltaTickCount > MinDeltaTickCount - Moredelta)

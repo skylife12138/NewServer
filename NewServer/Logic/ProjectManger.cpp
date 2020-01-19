@@ -3,6 +3,7 @@
 #include "../Net/MsgFilter.h"
 #include "../Net/NetWorkManger.h"
 #include "../Common/Common.h"
+#include "../Common/Log.h"
 
 
 GProjectMgr* GProMgr = NULL;
@@ -19,50 +20,60 @@ static void MainFree(void* p, int size)
 	free(p);
 }
 
-GProjectMgr::~GProjectMgr()
-{
-	if(GTimer)
-		delete GTimer;
-
-	IoThread::Instance()->Stop();
-}
-
 bool GProjectMgr::Init()
 {
-    cout << "init Begin..." << endl;
-	_proexit = false;
-	_LastTickTime = NowTickCount;
+	cout << "Server Begin Init ..." << endl;
 
 	GTimer = new GlobalTimer(GetNowTime(), MainAlloc, MainFree);
-	if (!GTimer)
+	if(!GTimer)
+		return false;
+	RealWorldTime = GTimer->GetNowTimeStamp();
+	GTimer->GetSystemTime(NowSystemTime,RealWorldTime);
+	LogThread::StaticInit();
+	if(!LogThread::Instance()->Start())
+	{
+		Error("LogThread Start Error!");
+		return false;
+	}
+	GObjFact = new ObjectFactory;
+	if (!GObjFact)
 	  return false;
-
+	
+	//以下是其他初始化逻辑
 	CMsgFilter::StaticInit();
 	IoThread::StaticInit();
 	ClientMgr::StaticInit();
 	CNetPackPool::StaticInit();
-	GObjFact = new ObjectFactory;
-
-	IoThread::Instance()->Start();
+	
+	if(!IoThread::Instance()->Start())
+	{
+		Error("IoThread Start Error!");
+		return false;
+	}
 #ifndef NET_LIB_EVENT	
 	NetMgr = new NewWorkMgr();
 	if(!NetMgr || !NetMgr->NetWorkInit())
 	{
-		cout << "Net Init Error!!!" << endl;
+		Error("Net Init Error!!!");
 		return false;
 	}
 #endif
 
-	cout << "server start success!!!" << endl;
+	IsServerInitOver = true;
+	Show("server start success!!!");
 	return true;
 }
 
 void GProjectMgr::Realase()
 {
+	IoThread::Instance()->Release();
+
 	CMsgFilter::StaticDestory();
 	IoThread::StaticDestory();
 	ClientMgr::StaticDestory();
 	CNetPackPool::StaticDestory();
+
+	LogThread::Instance()->Release();//必须最后析构
 
 	delete GTimer;
 	delete GObjFact;

@@ -23,11 +23,24 @@
 #include <execinfo.h>
 #endif // _WIN32
 
+class ThreadHandler;
+
 class BaseThread
 {
 public:
-	virtual void Stop() = 0;
+	BaseThread() { Init(); };
+	virtual ~BaseThread(){};
 	virtual void DoThread() = 0;
+
+	bool Start();
+	void Stop();
+
+	UINT32 GetThreadId();
+
+	ThreadHandler* I_pThreadHandler;
+	bool I_IsStop;
+private:
+	void Init();
 };
 
 class ThreadHandler

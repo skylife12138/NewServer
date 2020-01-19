@@ -29,8 +29,9 @@ void CClient::Init()
 void CClient::SetIp(char *ip)
 {
     DWORD Len = strlen(ip) + 1;
-    Len = Len > sizeof(Ip) ? sizeof(Ip)  : Len;
-    strncpy(Ip,ip,Len);
+    if(Len > sizeof(ip))
+        return;
+    strcpy(Ip,ip);
     Ip[Len - 1] = '\0';
 }
 
@@ -39,8 +40,8 @@ void CClient::AddRecvMsg(char* buff,uint16_t size)
     NetPack* aPack = ParseRecv(buff, size);
 	if(!aPack)
 	{
-		cout << "ParseRecv Error!!!" << endl;
-		return;
+        Error("ParseRecv Error!!!");
+        return;
 	}
     aPack->Ref++;
     RecvMsgVec.push(aPack);

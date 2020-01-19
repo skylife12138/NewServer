@@ -6,10 +6,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/github/NewServer/NewServer/Common/Common.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/Common.cpp.obj"
   "D:/github/NewServer/NewServer/Common/GTimer.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/GTimer.cpp.obj"
+  "D:/github/NewServer/NewServer/Common/Log.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/Log.cpp.obj"
   "D:/github/NewServer/NewServer/Common/MemoryPool.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj"
   "D:/github/NewServer/NewServer/Common/ObjectFactory.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj"
   "D:/github/NewServer/NewServer/Common/Portable.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/Portable.cpp.obj"
   "D:/github/NewServer/NewServer/Common/Thread.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/Thread.cpp.obj"
+  "D:/github/NewServer/NewServer/Logic/CJsonLog.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj"
   "D:/github/NewServer/NewServer/Logic/CPlayer.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj"
   "D:/github/NewServer/NewServer/Logic/CPlayerRecv.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj"
   "D:/github/NewServer/NewServer/Logic/Person.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Logic/Person.cpp.obj"
@@ -43,6 +45,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../protobuffer"
   "../libevent/include"
   "../tcmalloc/inlcude"
+  "../json/inlcude"
   )
 
 # Targets to which this target links.

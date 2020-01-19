@@ -4,7 +4,6 @@
 CMakeFiles/newserver.dir/Common/Common.cpp.obj
  D:/github/NewServer/NewServer/./Common/GTimer.h
  D:/github/NewServer/NewServer/./Common/Generate.h
- D:/github/NewServer/NewServer/./Common/List.h
  D:/github/NewServer/NewServer/./Common/Portable.h
  D:/github/NewServer/NewServer/./Logic/Define.h
  D:/github/NewServer/NewServer/./Logic/ProjectManger.h
@@ -13,20 +12,17 @@ CMakeFiles/newserver.dir/Common/Common.cpp.obj
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.cpp
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
  D:/github/NewServer/NewServer/Common/Lock.h
+ D:/github/NewServer/NewServer/Common/Log.h
  D:/github/NewServer/NewServer/Common/Portable.h
+ D:/github/NewServer/NewServer/Common/Thread.h
  D:/github/NewServer/NewServer/Logic/SingleTon.h
  D:/github/NewServer/NewServer/Prec.h
 CMakeFiles/newserver.dir/Common/GTimer.cpp.obj
- D:/github/NewServer/NewServer/Common/GTimer.cpp
- D:/github/NewServer/NewServer/Common/GTimer.h
- D:/github/NewServer/NewServer/Common/List.h
- D:/github/NewServer/NewServer/Common/Portable.h
- D:/github/NewServer/NewServer/Logic/SingleTon.h
-CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj
  D:/github/NewServer/NewServer/./Common/GTimer.h
  D:/github/NewServer/NewServer/./Common/Generate.h
- D:/github/NewServer/NewServer/./Common/List.h
  D:/github/NewServer/NewServer/./Common/Portable.h
  D:/github/NewServer/NewServer/./Logic/Define.h
  D:/github/NewServer/NewServer/./Logic/ProjectManger.h
@@ -34,6 +30,44 @@ CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.cpp
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
+ D:/github/NewServer/NewServer/Common/Lock.h
+ D:/github/NewServer/NewServer/Common/Portable.h
+ D:/github/NewServer/NewServer/Logic/SingleTon.h
+ D:/github/NewServer/NewServer/Prec.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj
+ D:/github/NewServer/NewServer/./Common/GTimer.h
+ D:/github/NewServer/NewServer/./Common/Generate.h
+ D:/github/NewServer/NewServer/./Common/Portable.h
+ D:/github/NewServer/NewServer/./Logic/Define.h
+ D:/github/NewServer/NewServer/./Logic/ProjectManger.h
+ D:/github/NewServer/NewServer/./Logic/Reflector.h
+ D:/github/NewServer/NewServer/./Logic/SingleTon.h
+ D:/github/NewServer/NewServer/Common/./ObjectFactory.h
+ D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
+ D:/github/NewServer/NewServer/Common/Lock.h
+ D:/github/NewServer/NewServer/Common/Log.cpp
+ D:/github/NewServer/NewServer/Common/Log.h
+ D:/github/NewServer/NewServer/Common/Portable.h
+ D:/github/NewServer/NewServer/Common/Thread.h
+ D:/github/NewServer/NewServer/Logic/SingleTon.h
+ D:/github/NewServer/NewServer/Prec.h
+CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj
+ D:/github/NewServer/NewServer/./Common/GTimer.h
+ D:/github/NewServer/NewServer/./Common/Generate.h
+ D:/github/NewServer/NewServer/./Common/Portable.h
+ D:/github/NewServer/NewServer/./Logic/Define.h
+ D:/github/NewServer/NewServer/./Logic/ProjectManger.h
+ D:/github/NewServer/NewServer/./Logic/Reflector.h
+ D:/github/NewServer/NewServer/./Logic/SingleTon.h
+ D:/github/NewServer/NewServer/Common/./ObjectFactory.h
+ D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
  D:/github/NewServer/NewServer/Common/Lock.h
  D:/github/NewServer/NewServer/Common/MemoryPool.cpp
  D:/github/NewServer/NewServer/Common/MemoryPool.h
@@ -43,7 +77,6 @@ CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj
  D:/github/NewServer/NewServer/./Common/GTimer.h
  D:/github/NewServer/NewServer/./Common/Generate.h
- D:/github/NewServer/NewServer/./Common/List.h
  D:/github/NewServer/NewServer/./Common/Portable.h
  D:/github/NewServer/NewServer/./Logic/Define.h
  D:/github/NewServer/NewServer/./Logic/ProjectManger.h
@@ -51,11 +84,15 @@ CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
  D:/github/NewServer/NewServer/Common/Lock.h
+ D:/github/NewServer/NewServer/Common/Log.h
  D:/github/NewServer/NewServer/Common/MemoryPool.h
  D:/github/NewServer/NewServer/Common/ObjectFactory.cpp
  D:/github/NewServer/NewServer/Common/ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Portable.h
+ D:/github/NewServer/NewServer/Common/Thread.h
  D:/github/NewServer/NewServer/Logic/SingleTon.h
  D:/github/NewServer/NewServer/Net/NetPack.h
  D:/github/NewServer/NewServer/Prec.h
@@ -65,6 +102,36 @@ CMakeFiles/newserver.dir/Common/Portable.cpp.obj
 CMakeFiles/newserver.dir/Common/Thread.cpp.obj
  D:/github/NewServer/NewServer/Common/Thread.cpp
  D:/github/NewServer/NewServer/Common/Thread.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj
+ D:/github/NewServer/NewServer/./Common/GTimer.h
+ D:/github/NewServer/NewServer/./Common/Generate.h
+ D:/github/NewServer/NewServer/./Common/Portable.h
+ D:/github/NewServer/NewServer/./Logic/Define.h
+ D:/github/NewServer/NewServer/./Logic/ProjectManger.h
+ D:/github/NewServer/NewServer/./Logic/Reflector.h
+ D:/github/NewServer/NewServer/./Logic/SingleTon.h
+ D:/github/NewServer/NewServer/Common/./ObjectFactory.h
+ D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
+ D:/github/NewServer/NewServer/Common/Lock.h
+ D:/github/NewServer/NewServer/Common/Log.h
+ D:/github/NewServer/NewServer/Common/Portable.h
+ D:/github/NewServer/NewServer/Common/Thread.h
+ D:/github/NewServer/NewServer/Logic/CJsonLog.cpp
+ D:/github/NewServer/NewServer/Logic/CJsonLog.h
+ D:/github/NewServer/NewServer/Logic/SingleTon.h
+ D:/github/NewServer/NewServer/Prec.h
+ D:/github/NewServer/NewServer/json/include/allocator.h
+ D:/github/NewServer/NewServer/json/include/autolink.h
+ D:/github/NewServer/NewServer/json/include/config.h
+ D:/github/NewServer/NewServer/json/include/forwards.h
+ D:/github/NewServer/NewServer/json/include/json.h
+ D:/github/NewServer/NewServer/json/include/json_features.h
+ D:/github/NewServer/NewServer/json/include/reader.h
+ D:/github/NewServer/NewServer/json/include/value.h
+ D:/github/NewServer/NewServer/json/include/version.h
+ D:/github/NewServer/NewServer/json/include/writer.h
 CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj
  ../libevent/include/event2/event-config.h
  ../libevent/include/event2/event.h
@@ -116,6 +183,7 @@ CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
  D:/github/NewServer/NewServer/Common/Lock.h
  D:/github/NewServer/NewServer/Common/Thread.h
  D:/github/NewServer/NewServer/Logic/CPlayer.cpp
@@ -179,6 +247,7 @@ CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
  D:/github/NewServer/NewServer/Common/Lock.h
  D:/github/NewServer/NewServer/Logic/CPlayer.h
  D:/github/NewServer/NewServer/Logic/CPlayerRecv.cpp
@@ -252,7 +321,9 @@ CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
  D:/github/NewServer/NewServer/Common/Lock.h
+ D:/github/NewServer/NewServer/Common/Log.h
  D:/github/NewServer/NewServer/Common/Portable.h
  D:/github/NewServer/NewServer/Common/Thread.h
  D:/github/NewServer/NewServer/Logic/CPlayer.h
@@ -275,13 +346,17 @@ CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj
  .././Common/GTimer.h
  .././Common/Generate.h
- .././Common/List.h
  .././Common/Portable.h
  .././Logic/Define.h
  .././Logic/ProjectManger.h
  .././Logic/Reflector.h
- .././Logic/SingleTon.h
  ../Prec.h
+ D:/github/NewServer/NewServer/Common/./ObjectFactory.h
+ D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
+ D:/github/NewServer/NewServer/Common/Lock.h
+ D:/github/NewServer/NewServer/Common/Portable.h
  D:/github/NewServer/NewServer/Logic/Reflector.cpp
  D:/github/NewServer/NewServer/Logic/Reflector.h
  D:/github/NewServer/NewServer/Logic/SingleTon.h
@@ -328,7 +403,6 @@ CMakeFiles/newserver.dir/Net/CClient.cpp.obj
  ../protobuffer/google/protobuf/wire_format_lite.h
  D:/github/NewServer/NewServer/./Common/GTimer.h
  D:/github/NewServer/NewServer/./Common/Generate.h
- D:/github/NewServer/NewServer/./Common/List.h
  D:/github/NewServer/NewServer/./Common/Portable.h
  D:/github/NewServer/NewServer/./Logic/Define.h
  D:/github/NewServer/NewServer/./Logic/ProjectManger.h
@@ -336,6 +410,8 @@ CMakeFiles/newserver.dir/Net/CClient.cpp.obj
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
  D:/github/NewServer/NewServer/Common/Lock.h
  D:/github/NewServer/NewServer/Common/Portable.h
  D:/github/NewServer/NewServer/Common/Thread.h
@@ -399,7 +475,6 @@ CMakeFiles/newserver.dir/Net/IoThread.cpp.obj
  ../protobuffer/google/protobuf/wire_format_lite.h
  D:/github/NewServer/NewServer/./Common/GTimer.h
  D:/github/NewServer/NewServer/./Common/Generate.h
- D:/github/NewServer/NewServer/./Common/List.h
  D:/github/NewServer/NewServer/./Common/Portable.h
  D:/github/NewServer/NewServer/./Logic/Define.h
  D:/github/NewServer/NewServer/./Logic/ProjectManger.h
@@ -407,6 +482,8 @@ CMakeFiles/newserver.dir/Net/IoThread.cpp.obj
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
  D:/github/NewServer/NewServer/Common/Lock.h
  D:/github/NewServer/NewServer/Common/Portable.h
  D:/github/NewServer/NewServer/Common/Thread.h
@@ -466,7 +543,6 @@ CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj
  ../protobuffer/google/protobuf/wire_format_lite.h
  D:/github/NewServer/NewServer/./Common/GTimer.h
  D:/github/NewServer/NewServer/./Common/Generate.h
- D:/github/NewServer/NewServer/./Common/List.h
  D:/github/NewServer/NewServer/./Common/Portable.h
  D:/github/NewServer/NewServer/./Logic/Define.h
  D:/github/NewServer/NewServer/./Logic/ProjectManger.h
@@ -474,6 +550,8 @@ CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
  D:/github/NewServer/NewServer/Common/Lock.h
  D:/github/NewServer/NewServer/Common/Portable.h
  D:/github/NewServer/NewServer/Logic/CPlayer.h
@@ -488,7 +566,6 @@ CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj
  D:/github/NewServer/NewServer/./Common/GTimer.h
  D:/github/NewServer/NewServer/./Common/Generate.h
- D:/github/NewServer/NewServer/./Common/List.h
  D:/github/NewServer/NewServer/./Common/Portable.h
  D:/github/NewServer/NewServer/./Logic/Define.h
  D:/github/NewServer/NewServer/./Logic/ProjectManger.h
@@ -496,6 +573,8 @@ CMakeFiles/newserver.dir/Net/NetPack.cpp.obj
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
  D:/github/NewServer/NewServer/Common/Lock.h
  D:/github/NewServer/NewServer/Common/Portable.h
  D:/github/NewServer/NewServer/Logic/SingleTon.h
@@ -550,6 +629,7 @@ CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
  D:/github/NewServer/NewServer/Common/Lock.h
  D:/github/NewServer/NewServer/Common/Portable.h
  D:/github/NewServer/NewServer/Logic/CPlayer.h
@@ -564,19 +644,33 @@ CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj
  D:/github/NewServer/NewServer/libzmq/include/zmq.h
  D:/github/NewServer/NewServer/protobuffer/player.pb.h
 CMakeFiles/newserver.dir/main.cpp.obj
+ ../tcmalloc/inlcude/gperftools/malloc_extension.h
  D:/github/NewServer/NewServer/./Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/./Common/Common.h
  D:/github/NewServer/NewServer/./Common/GTimer.h
  D:/github/NewServer/NewServer/./Common/Generate.h
  D:/github/NewServer/NewServer/./Common/List.h
  D:/github/NewServer/NewServer/./Common/Lock.h
+ D:/github/NewServer/NewServer/./Common/Log.h
  D:/github/NewServer/NewServer/./Common/MemoryPool.h
  D:/github/NewServer/NewServer/./Common/Portable.h
+ D:/github/NewServer/NewServer/./Common/Thread.h
+ D:/github/NewServer/NewServer/./Logic/CJsonLog.h
  D:/github/NewServer/NewServer/./Logic/Define.h
  D:/github/NewServer/NewServer/./Logic/ProjectManger.h
  D:/github/NewServer/NewServer/./Logic/Reflector.h
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/./Prec.h
+ D:/github/NewServer/NewServer/./json/include/allocator.h
+ D:/github/NewServer/NewServer/./json/include/autolink.h
+ D:/github/NewServer/NewServer/./json/include/config.h
+ D:/github/NewServer/NewServer/./json/include/forwards.h
+ D:/github/NewServer/NewServer/./json/include/json.h
+ D:/github/NewServer/NewServer/./json/include/json_features.h
+ D:/github/NewServer/NewServer/./json/include/reader.h
+ D:/github/NewServer/NewServer/./json/include/value.h
+ D:/github/NewServer/NewServer/./json/include/version.h
+ D:/github/NewServer/NewServer/./json/include/writer.h
  D:/github/NewServer/NewServer/Prec.h
  D:/github/NewServer/NewServer/main.cpp
 CMakeFiles/newserver.dir/netapi.cpp.obj

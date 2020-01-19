@@ -1,5 +1,37 @@
 #include "Thread.h"
 
+void BaseThread::Init()
+{
+	I_pThreadHandler = NULL;
+	I_IsStop = false;
+}
+
+UINT32 BaseThread::GetThreadId()
+{
+	if (I_pThreadHandler)
+		return I_pThreadHandler->GetThreadId();
+	return 0;
+}
+
+bool BaseThread::Start()
+{
+	CreateThreadHandler(this, true, I_pThreadHandler);
+	if (!I_pThreadHandler)
+		return false;
+	return true;
+}
+
+void BaseThread::Stop()
+{
+	I_IsStop = true;
+	if (I_pThreadHandler)
+	{
+		I_pThreadHandler->WaitFor();//等待子线程退出
+		I_pThreadHandler->Release();
+		I_pThreadHandler = NULL;
+	}
+}
+
 ThreadHandler::ThreadHandler(BaseThread* pThread,bool NeedWaitFor)
 {
 	_IsStop = true;
@@ -28,12 +60,6 @@ unsigned int __attribute__((__stdcall__)) ThreadHandler::_StaticThreadFunc(void 
 	ThreadHandler* pThreadCtr = (ThreadHandler*)arg;
 	pThreadCtr->_IsStop = false;
 	pThreadCtr->_pThread->DoThread();
-	if (!pThreadCtr->_NeedWaitfor)
-	{
-		CloseHandle(pThreadCtr->_WinHandle);
-		pThreadCtr->_WinHandle = INVALID_HANDLE_VALUE;
-		pThreadCtr->_IsStop = true;
-	}
 	return 0;
 }
 #else
@@ -112,16 +138,13 @@ bool ThreadHandler::WaitFor(unsigned int WaitTime)
 	if (_WinHandle == INVALID_HANDLE_VALUE)
 		return false;
 	DWORD ret = WaitForSingleObject(_WinHandle, WaitTime);
-	CloseHandle(_WinHandle);
-	_WinHandle = INVALID_HANDLE_VALUE;
-	_IsStop = true;
 	if (ret == WAIT_OBJECT_0)
 		return true;
+	return false;
 #else
 	pthread_join(_ThreadId, NULL);
 	return true;
 #endif
-	return false;
 }
 
 void ThreadHandler::Release()

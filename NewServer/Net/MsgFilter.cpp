@@ -30,7 +30,7 @@ void CMsgFilter::DealMsg(NetPack *p,Cplayer* aPly)
     auto iter = mHandlerData.find(p->Id);
     if(iter == mHandlerData.end())
     {
-        cout << "Recv Msg Not Regisit id = " << p->Id << endl;
+        Error("Recv Msg Not Regisit id = %d", p->Id);
         delete aPly;
         return;
     }
@@ -42,12 +42,12 @@ void CMsgFilter::DealMsg(NetPack *p,Cplayer* aPly)
     }
     iter->second.LastRecvTime = GTimer->GetNowTimeStamp();
     (aPly->*(iter->second.mHandler))(p);
-    cout << "DealMsg id = " << p->Id << endl;
+    Show("DealMsg id = %d", p->Id);
 }
 
 void CMsgFilter::CMsgFilter::UnDealMsg(NetPack* p,Cplayer* aPly)
 {
     //发送错误消息
-    cout << "UnDealMsg id = " << p->Id << endl;
+    Error("UnDealMsg id = %d",p->Id);
 }
 

@@ -45,29 +45,13 @@ public:
     virtual ~IoThread();
 
 	virtual void DoThread();
-	virtual void Stop();
-
-	bool Start();
-	bool Init();
-	void UnInit();
-
-	UINT32 GetThreadId();
+	void Release();
 
 	void SendMsg(TcpConnection* Conn,int size);
-
-#ifdef _WIN32
-	HANDLE GetHandle();
-	HANDLE I_CompletionPort;
-#endif
-
-	ThreadHandler* I_pThreadHandler;
 public:
 	struct event_base *base;
 	struct evconnlistener *listener;
 	struct event *singal_event;
-
-private:
-	bool I_IsStop;
 };
 
 

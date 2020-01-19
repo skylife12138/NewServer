@@ -9,4 +9,5 @@ enum EMsgId
   MSG_MAX,
 };
 
+
 #endif

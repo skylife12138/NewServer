@@ -47,7 +47,7 @@ int MemoryPool::Init(int Size,int Num,char* Name, void* MemArry,bool IsSingleThr
 
 void MemoryPool::UnInit()
 {
-	cout << "delete memorypool" << _PoolName << endl;
+	cout << "delete memorypool " << _PoolName << endl;
 	int num = 0;
 	void *pos = _FreeMollocList;
 	while(pos)
@@ -90,7 +90,8 @@ void* MemoryPool::Alloc()
 	}
 	else
 	{
-		cout << "MemoryPool " << _PoolName << " Not Enouth!" << endl;
+		if(strcmp(_PoolName,"LogMsg"))//防止写日志发生死循环
+			Show("MemoryPool %s Not Enouth!",_PoolName);
 
 		node = operator new(_EachSize);
 		*(void **)node = _ExtMollocList;
@@ -120,7 +121,7 @@ void MemoryPool::Release(void* node)
 int MemoryPool::ShowState()
 {
 	int TotalMem = (_AllocStaticNum + _AllocExtNum) * _EachSize;
-	cout << "MemoryPool " << _PoolName << " UseNum = " << _UseNum << " TotalMem =" << TotalMem << endl;
+	Show("MemoryPool %s , UseNum = %d , TotalMem = %d",_PoolName, _UseNum,TotalMem);
 	return TotalMem;
 }
 

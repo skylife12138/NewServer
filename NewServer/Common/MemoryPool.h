@@ -63,7 +63,7 @@ template<class T>
 class ShellT:public ShellCount, public T //必须先继承ShellCount保证UseCount变量在ShellT的内存头部
 {
 public:
-	ShellT(){ T(); };
+	ShellT(){ };
 	template <class P> ShellT(P p) : T(p){};
 	template <class P1, class P2> ShellT(P1 p1, P2 p2) : T(p1, p2){};
 	~ShellT(){};

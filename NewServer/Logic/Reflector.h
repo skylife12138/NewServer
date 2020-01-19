@@ -15,8 +15,8 @@ public:
 class RObjectFactory
 {
 public:
-  RObjectFactory() { cout << "RObjectFactory()" << endl; }
-  virtual ~RObjectFactory() { cout << "~RObjectFactory" << endl; }
+  RObjectFactory() { }
+  virtual ~RObjectFactory() { }
   virtual ReflectObject* newInstance() = 0;
 };
 
@@ -38,8 +38,8 @@ private:
 #define REFLECT(name)\
 class ObjectFactory_##name : public RObjectFactory{\
 public:\
-    ObjectFactory_##name(){ std::cout << "ObjectFactory_" << #name << "()" << std::endl; }\
-    virtual ~ObjectFactory_##name(){ std::cout << "~ObjectFactory_" << #name << "()" << std::endl; }\
+    ObjectFactory_##name(){  }\
+    virtual ~ObjectFactory_##name(){ }\
     ReflectObject* newInstance() {\
         return new name(); \
     }\

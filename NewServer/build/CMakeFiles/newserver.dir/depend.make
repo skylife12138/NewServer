@@ -3,7 +3,6 @@
 
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: .././Common/GTimer.h
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: .././Common/Generate.h
-CMakeFiles/newserver.dir/Common/Common.cpp.obj: .././Common/List.h
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: .././Common/Portable.h
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: .././Logic/Define.h
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: .././Logic/ProjectManger.h
@@ -12,20 +11,53 @@ CMakeFiles/newserver.dir/Common/Common.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: ../Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: ../Common/Common.cpp
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Common/Common.cpp.obj: ../Common/GTimer.h
+CMakeFiles/newserver.dir/Common/Common.cpp.obj: ../Common/List.h
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: ../Common/Lock.h
+CMakeFiles/newserver.dir/Common/Common.cpp.obj: ../Common/Log.h
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: ../Common/Portable.h
+CMakeFiles/newserver.dir/Common/Common.cpp.obj: ../Common/Thread.h
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: ../Logic/SingleTon.h
 CMakeFiles/newserver.dir/Common/Common.cpp.obj: ../Prec.h
 
+CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: .././Common/GTimer.h
+CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: .././Common/Generate.h
+CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: .././Common/Portable.h
+CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: .././Logic/Define.h
+CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: .././Logic/ProjectManger.h
+CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: .././Logic/Reflector.h
+CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: .././Logic/SingleTon.h
+CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: ../Common/./ObjectFactory.h
+CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: ../Common/Common.h
 CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: ../Common/GTimer.cpp
 CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: ../Common/GTimer.h
 CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: ../Common/List.h
+CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: ../Common/Lock.h
 CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: ../Common/Portable.h
 CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: ../Logic/SingleTon.h
+CMakeFiles/newserver.dir/Common/GTimer.cpp.obj: ../Prec.h
+
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: .././Common/GTimer.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: .././Common/Generate.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: .././Common/Portable.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: .././Logic/Define.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: .././Logic/ProjectManger.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: .././Logic/Reflector.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: .././Logic/SingleTon.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: ../Common/./ObjectFactory.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: ../Common/GTimer.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: ../Common/List.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: ../Common/Lock.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: ../Common/Log.cpp
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: ../Common/Log.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: ../Common/Portable.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: ../Common/Thread.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: ../Logic/SingleTon.h
+CMakeFiles/newserver.dir/Common/Log.cpp.obj: ../Prec.h
 
 CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: .././Common/GTimer.h
 CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: .././Common/Generate.h
-CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: .././Common/List.h
 CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: .././Common/Portable.h
 CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: .././Logic/Define.h
 CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: .././Logic/ProjectManger.h
@@ -33,6 +65,8 @@ CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: .././Logic/Reflector.h
 CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: ../Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: ../Common/GTimer.h
+CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: ../Common/List.h
 CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: ../Common/Lock.h
 CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: ../Common/MemoryPool.cpp
 CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: ../Common/MemoryPool.h
@@ -42,7 +76,6 @@ CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj: ../Prec.h
 
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: .././Common/GTimer.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: .././Common/Generate.h
-CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: .././Common/List.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: .././Common/Portable.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: .././Logic/Define.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: .././Logic/ProjectManger.h
@@ -50,11 +83,15 @@ CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: .././Logic/Reflector.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Common/GTimer.h
+CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Common/List.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Common/Lock.h
+CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Common/Log.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Common/MemoryPool.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Common/ObjectFactory.cpp
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Common/ObjectFactory.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Common/Portable.h
+CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Common/Thread.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Logic/SingleTon.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Net/NetPack.h
 CMakeFiles/newserver.dir/Common/ObjectFactory.cpp.obj: ../Prec.h
@@ -64,6 +101,36 @@ CMakeFiles/newserver.dir/Common/Portable.cpp.obj: ../Common/Portable.h
 
 CMakeFiles/newserver.dir/Common/Thread.cpp.obj: ../Common/Thread.cpp
 CMakeFiles/newserver.dir/Common/Thread.cpp.obj: ../Common/Thread.h
+
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: .././Common/GTimer.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: .././Common/Generate.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: .././Common/Portable.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: .././Logic/Define.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: .././Logic/ProjectManger.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: .././Logic/Reflector.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: .././Logic/SingleTon.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Common/./ObjectFactory.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Common/GTimer.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Common/List.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Common/Lock.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Common/Log.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Common/Portable.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Common/Thread.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Logic/CJsonLog.cpp
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Logic/CJsonLog.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Logic/SingleTon.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../Prec.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../json/include/allocator.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../json/include/autolink.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../json/include/config.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../json/include/forwards.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../json/include/json.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../json/include/json_features.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../json/include/reader.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../json/include/value.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../json/include/version.h
+CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj: ../json/include/writer.h
 
 CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj: ../libevent/include/event2/event-config.h
 CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj: ../libevent/include/event2/event.h
@@ -115,6 +182,7 @@ CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj: .././Logic/Reflector.h
 CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj: ../Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj: ../Common/GTimer.h
 CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj: ../Common/Lock.h
 CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj: ../Common/Thread.h
 CMakeFiles/newserver.dir/Logic/CPlayer.cpp.obj: ../Logic/CPlayer.cpp
@@ -178,6 +246,7 @@ CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj: .././Logic/Reflector.h
 CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj: ../Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj: ../Common/GTimer.h
 CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj: ../Common/Lock.h
 CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj: ../Logic/CPlayer.h
 CMakeFiles/newserver.dir/Logic/CPlayerRecv.cpp.obj: ../Logic/CPlayerRecv.cpp
@@ -251,7 +320,9 @@ CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj: .././Logic/Reflector.h
 CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj: ../Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj: ../Common/GTimer.h
 CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj: ../Common/Lock.h
+CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj: ../Common/Log.h
 CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj: ../Common/Portable.h
 CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj: ../Common/Thread.h
 CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj: ../Logic/CPlayer.h
@@ -274,13 +345,17 @@ CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj: ../protobuffer/player.pb.h
 
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: .././Common/GTimer.h
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: .././Common/Generate.h
-CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: .././Common/List.h
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: .././Common/Portable.h
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: .././Logic/Define.h
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: .././Logic/ProjectManger.h
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: .././Logic/Reflector.h
-CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: ../Prec.h
+CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: ../Common/./ObjectFactory.h
+CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: ../Common/GTimer.h
+CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: ../Common/List.h
+CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: ../Common/Lock.h
+CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: ../Common/Portable.h
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: ../Logic/Reflector.cpp
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: ../Logic/Reflector.h
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj: ../Logic/SingleTon.h
@@ -327,7 +402,6 @@ CMakeFiles/newserver.dir/Net/CClient.cpp.obj: ../protobuffer/google/protobuf/stu
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: ../protobuffer/google/protobuf/wire_format_lite.h
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: .././Common/GTimer.h
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: .././Common/Generate.h
-CMakeFiles/newserver.dir/Net/CClient.cpp.obj: .././Common/List.h
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: .././Common/Portable.h
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: .././Logic/Define.h
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: .././Logic/ProjectManger.h
@@ -335,6 +409,8 @@ CMakeFiles/newserver.dir/Net/CClient.cpp.obj: .././Logic/Reflector.h
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: ../Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Net/CClient.cpp.obj: ../Common/GTimer.h
+CMakeFiles/newserver.dir/Net/CClient.cpp.obj: ../Common/List.h
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: ../Common/Lock.h
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: ../Common/Portable.h
 CMakeFiles/newserver.dir/Net/CClient.cpp.obj: ../Common/Thread.h
@@ -398,7 +474,6 @@ CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: ../protobuffer/google/protobuf/st
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: ../protobuffer/google/protobuf/wire_format_lite.h
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: .././Common/GTimer.h
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: .././Common/Generate.h
-CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: .././Common/List.h
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: .././Common/Portable.h
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: .././Logic/Define.h
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: .././Logic/ProjectManger.h
@@ -406,6 +481,8 @@ CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: .././Logic/Reflector.h
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: ../Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: ../Common/GTimer.h
+CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: ../Common/List.h
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: ../Common/Lock.h
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: ../Common/Portable.h
 CMakeFiles/newserver.dir/Net/IoThread.cpp.obj: ../Common/Thread.h
@@ -465,7 +542,6 @@ CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: ../protobuffer/google/protobuf/s
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: ../protobuffer/google/protobuf/wire_format_lite.h
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: .././Common/GTimer.h
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: .././Common/Generate.h
-CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: .././Common/List.h
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: .././Common/Portable.h
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: .././Logic/Define.h
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: .././Logic/ProjectManger.h
@@ -473,6 +549,8 @@ CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: .././Logic/Reflector.h
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: ../Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: ../Common/GTimer.h
+CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: ../Common/List.h
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: ../Common/Lock.h
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: ../Common/Portable.h
 CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: ../Logic/CPlayer.h
@@ -487,7 +565,6 @@ CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj: ../protobuffer/player.pb.h
 
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: .././Common/GTimer.h
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: .././Common/Generate.h
-CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: .././Common/List.h
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: .././Common/Portable.h
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: .././Logic/Define.h
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: .././Logic/ProjectManger.h
@@ -495,6 +572,8 @@ CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: .././Logic/Reflector.h
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: ../Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: ../Common/GTimer.h
+CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: ../Common/List.h
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: ../Common/Lock.h
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: ../Common/Portable.h
 CMakeFiles/newserver.dir/Net/NetPack.cpp.obj: ../Logic/SingleTon.h
@@ -549,6 +628,7 @@ CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj: .././Logic/Reflector.h
 CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj: ../Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj: ../Common/Common.h
+CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj: ../Common/GTimer.h
 CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj: ../Common/Lock.h
 CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj: ../Common/Portable.h
 CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj: ../Logic/CPlayer.h
@@ -563,19 +643,33 @@ CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj: ../Prec.h
 CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj: ../libzmq/include/zmq.h
 CMakeFiles/newserver.dir/Net/NetWorkManger.cpp.obj: ../protobuffer/player.pb.h
 
+CMakeFiles/newserver.dir/main.cpp.obj: ../tcmalloc/inlcude/gperftools/malloc_extension.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Common/./ObjectFactory.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Common/Common.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Common/GTimer.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Common/Generate.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Common/List.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Common/Lock.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././Common/Log.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Common/MemoryPool.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Common/Portable.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././Common/Thread.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././Logic/CJsonLog.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Logic/Define.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Logic/ProjectManger.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Logic/Reflector.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Logic/SingleTon.h
 CMakeFiles/newserver.dir/main.cpp.obj: .././Prec.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././json/include/allocator.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././json/include/autolink.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././json/include/config.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././json/include/forwards.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././json/include/json.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././json/include/json_features.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././json/include/reader.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././json/include/value.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././json/include/version.h
+CMakeFiles/newserver.dir/main.cpp.obj: .././json/include/writer.h
 CMakeFiles/newserver.dir/main.cpp.obj: ../Prec.h
 CMakeFiles/newserver.dir/main.cpp.obj: ../main.cpp
 

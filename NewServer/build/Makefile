@@ -176,6 +176,33 @@ Common/GTimer.cpp.s:
 	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/GTimer.cpp.s
 .PHONY : Common/GTimer.cpp.s
 
+Common/Log.obj: Common/Log.cpp.obj
+
+.PHONY : Common/Log.obj
+
+# target to build an object file
+Common/Log.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/Log.cpp.obj
+.PHONY : Common/Log.cpp.obj
+
+Common/Log.i: Common/Log.cpp.i
+
+.PHONY : Common/Log.i
+
+# target to preprocess a source file
+Common/Log.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/Log.cpp.i
+.PHONY : Common/Log.cpp.i
+
+Common/Log.s: Common/Log.cpp.s
+
+.PHONY : Common/Log.s
+
+# target to generate assembly for a file
+Common/Log.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/Log.cpp.s
+.PHONY : Common/Log.cpp.s
+
 Common/MemoryPool.obj: Common/MemoryPool.cpp.obj
 
 .PHONY : Common/MemoryPool.obj
@@ -283,6 +310,33 @@ Common/Thread.s: Common/Thread.cpp.s
 Common/Thread.cpp.s:
 	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/Thread.cpp.s
 .PHONY : Common/Thread.cpp.s
+
+Logic/CJsonLog.obj: Logic/CJsonLog.cpp.obj
+
+.PHONY : Logic/CJsonLog.obj
+
+# target to build an object file
+Logic/CJsonLog.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.obj
+.PHONY : Logic/CJsonLog.cpp.obj
+
+Logic/CJsonLog.i: Logic/CJsonLog.cpp.i
+
+.PHONY : Logic/CJsonLog.i
+
+# target to preprocess a source file
+Logic/CJsonLog.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.i
+.PHONY : Logic/CJsonLog.cpp.i
+
+Logic/CJsonLog.s: Logic/CJsonLog.cpp.s
+
+.PHONY : Logic/CJsonLog.s
+
+# target to generate assembly for a file
+Logic/CJsonLog.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Logic/CJsonLog.cpp.s
+.PHONY : Logic/CJsonLog.cpp.s
 
 Logic/CPlayer.obj: Logic/CPlayer.cpp.obj
 
@@ -650,6 +704,9 @@ help:
 	@echo ... Common/GTimer.obj
 	@echo ... Common/GTimer.i
 	@echo ... Common/GTimer.s
+	@echo ... Common/Log.obj
+	@echo ... Common/Log.i
+	@echo ... Common/Log.s
 	@echo ... Common/MemoryPool.obj
 	@echo ... Common/MemoryPool.i
 	@echo ... Common/MemoryPool.s
@@ -662,6 +719,9 @@ help:
 	@echo ... Common/Thread.obj
 	@echo ... Common/Thread.i
 	@echo ... Common/Thread.s
+	@echo ... Logic/CJsonLog.obj
+	@echo ... Logic/CJsonLog.i
+	@echo ... Logic/CJsonLog.s
 	@echo ... Logic/CPlayer.obj
 	@echo ... Logic/CPlayer.i
 	@echo ... Logic/CPlayer.s

@@ -7,5 +7,5 @@ template <> void Cplayer::RecvMsg<MSG_HeartBeat>(NetPack* p)
 {
     TestProto TestP;
 	TestP.ParseFromArray(p->Data, p->Size);
-	cout << "TestProto is id =" << TestP.id() << " isman = " << TestP.isman() << endl;
+	Show("TestProto is id = %d,isman = %d", TestP.id(), TestP.isman());
 }

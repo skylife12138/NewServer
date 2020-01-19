@@ -5,8 +5,8 @@
 class GProjectMgr
 {
 public:
-  GProjectMgr() { Init(); }
-  ~GProjectMgr();
+  GProjectMgr():_proexit(false),_LastTickTime(0){}
+  ~GProjectMgr(){};
   bool Init();
   void Realase();
   void MainLoop();

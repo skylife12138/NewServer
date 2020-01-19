@@ -1,4 +1,5 @@
 #include "Reflector.h"
+#include "../Common/Common.h"
 
 Reflector::~Reflector()
 {
@@ -15,7 +16,7 @@ void Reflector::RegisterFactory(const string& className, RObjectFactory *of)
 	map<string, RObjectFactory*>::iterator it = objectFactories.find(className);
 	if (it != objectFactories.end()) 
 	{
-		std::cout << "arleady register yet!" << std::endl;
+		Show("arleady register yet!");
 	}
 	else 
 	{

@@ -1,4 +1,5 @@
 #include "GTimer.h"
+#include "Common.h"
 #include <iostream>
 #ifdef _WIN32
 #include <time.h>
@@ -53,12 +54,16 @@ void GlobalTimer::GetSystemTime(ST& TimeData,DWORD TimeStamp)
 {
 	tm TempData;
     time_t NowRealTime = TimeStamp? TimeStamp:time(NULL);
+#ifdef WIN32
 	localtime_s(&TempData,&NowRealTime);
+#else
+	localtime_r(&NowRealTime,&TempData);
+#endif
 	
-	TimeData.Year = TempData.tm_year;
-	TimeData.Month = TempData.tm_mon;
+	TimeData.Year = TempData.tm_year+1900;
+	TimeData.Month = TempData.tm_mon+1;
 	TimeData.Date = TempData.tm_mday;
-	TimeData.WeekDay = TempData.tm_wday;
+	TimeData.WeekDay = TempData.tm_wday?TempData.tm_wday:7;
 	TimeData.Hour = TempData.tm_hour;
 	TimeData.Minute = TempData.tm_min;
 	TimeData.Second = TempData.tm_sec;
@@ -67,10 +72,9 @@ void GlobalTimer::GetSystemTime(ST& TimeData,DWORD TimeStamp)
 DWORD GlobalTimer::MakeTime(ST& TimeData)
 {
 	tm TempData;
-	TempData.tm_year = TimeData.Year;
-	TempData.tm_mon = TimeData.Month;
+	TempData.tm_year = TimeData.Year-1900;
+	TempData.tm_mon = TimeData.Month-1;
 	TempData.tm_mday = TimeData.Date;
-	TempData.tm_wday = TimeData.WeekDay;
 	TempData.tm_hour = TimeData.Hour ;
 	TempData.tm_min = TimeData.Minute;
 	TempData.tm_sec = TimeData.Second;
@@ -102,7 +106,7 @@ void DelayTimeObject::ReHook()
 
 void TestDelayTime::Invoke()
 {
-	std::cout << "TestDelayTime" << std::endl;
+	Show("TestDelayTime");
 	ReHook();
 }
 

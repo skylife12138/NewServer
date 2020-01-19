@@ -11,13 +11,13 @@ bool NewWorkMgr::NetWorkInit()
 	pCtx = zmq_ctx_new();
     if(!pCtx)
     {
-		cout << "Net New Error!" << endl;
+		Error("Net New Error!");
 		return 0;
 	}
     pSock = zmq_socket(pCtx,ZMQ_DEALER);
 	if (!pSock)
 	{
-		cout << "Socket Init Error!" << endl;
+		Error("Socket Init Error!");
 		zmq_ctx_destroy(pCtx);
 		return false;
 	}
@@ -35,8 +35,8 @@ bool NewWorkMgr::NetWorkInit()
 		zmq_ctx_destroy(pCtx);
 		return false;
 	}
-	cout << "bind at: " << ss.str().c_str() << endl;
-    return true;
+	Show("bind at: %s", ss.str().c_str());
+	return true;
 }
 
 void NewWorkMgr::HandleNetMsg()
@@ -46,13 +46,12 @@ void NewWorkMgr::HandleNetMsg()
     errno = 0;
 	if (zmq_recv(pSock, szMsg, sizeof(szMsg), 0) < 0)
 	{
-        //cout << "error = " << zmq_strerror(errno) << endl;
 		return;
 	}
 	NetPack* aPack = ParseRecv(szMsg, MAX_MSG_LEN);
 	if(!aPack)
 	{
-		cout << "ParseRecv Error!!!" << endl;
+		Error("ParseRecv Error!!!");
 		return;
 	}
 
