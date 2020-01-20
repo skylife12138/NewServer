@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/newserver.dir/Common/Portable.cpp.obj"
   "CMakeFiles/newserver.dir/Common/Thread.cpp.obj"
   "CMakeFiles/newserver.dir/Common/Log.cpp.obj"
+  "CMakeFiles/newserver.dir/Common/GPython.cpp.obj"
   "CMakeFiles/newserver.dir/Net/IoThread.cpp.obj"
   "CMakeFiles/newserver.dir/Net/MsgFilter.cpp.obj"
   "CMakeFiles/newserver.dir/Net/NetPack.cpp.obj"

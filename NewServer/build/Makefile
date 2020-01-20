@@ -149,6 +149,33 @@ Common/Common.cpp.s:
 	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/Common.cpp.s
 .PHONY : Common/Common.cpp.s
 
+Common/GPython.obj: Common/GPython.cpp.obj
+
+.PHONY : Common/GPython.obj
+
+# target to build an object file
+Common/GPython.cpp.obj:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/GPython.cpp.obj
+.PHONY : Common/GPython.cpp.obj
+
+Common/GPython.i: Common/GPython.cpp.i
+
+.PHONY : Common/GPython.i
+
+# target to preprocess a source file
+Common/GPython.cpp.i:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/GPython.cpp.i
+.PHONY : Common/GPython.cpp.i
+
+Common/GPython.s: Common/GPython.cpp.s
+
+.PHONY : Common/GPython.s
+
+# target to generate assembly for a file
+Common/GPython.cpp.s:
+	cd /d d:\github\NewServer\NewServer\build && $(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/Common/GPython.cpp.s
+.PHONY : Common/GPython.cpp.s
+
 Common/GTimer.obj: Common/GTimer.cpp.obj
 
 .PHONY : Common/GTimer.obj
@@ -701,6 +728,9 @@ help:
 	@echo ... Common/Common.obj
 	@echo ... Common/Common.i
 	@echo ... Common/Common.s
+	@echo ... Common/GPython.obj
+	@echo ... Common/GPython.i
+	@echo ... Common/GPython.s
 	@echo ... Common/GTimer.obj
 	@echo ... Common/GTimer.i
 	@echo ... Common/GTimer.s

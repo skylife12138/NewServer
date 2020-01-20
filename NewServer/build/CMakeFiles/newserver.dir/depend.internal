@@ -20,6 +20,99 @@ CMakeFiles/newserver.dir/Common/Common.cpp.obj
  D:/github/NewServer/NewServer/Common/Thread.h
  D:/github/NewServer/NewServer/Logic/SingleTon.h
  D:/github/NewServer/NewServer/Prec.h
+CMakeFiles/newserver.dir/Common/GPython.cpp.obj
+ D:/github/NewServer/NewServer/./Common/GTimer.h
+ D:/github/NewServer/NewServer/./Common/Generate.h
+ D:/github/NewServer/NewServer/./Common/Portable.h
+ D:/github/NewServer/NewServer/./Logic/Define.h
+ D:/github/NewServer/NewServer/./Logic/ProjectManger.h
+ D:/github/NewServer/NewServer/./Logic/Reflector.h
+ D:/github/NewServer/NewServer/./Logic/SingleTon.h
+ D:/github/NewServer/NewServer/Common/./ObjectFactory.h
+ D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GPython.cpp
+ D:/github/NewServer/NewServer/Common/GPython.h
+ D:/github/NewServer/NewServer/Common/GTimer.h
+ D:/github/NewServer/NewServer/Common/List.h
+ D:/github/NewServer/NewServer/Common/Lock.h
+ D:/github/NewServer/NewServer/Common/Log.h
+ D:/github/NewServer/NewServer/Common/Portable.h
+ D:/github/NewServer/NewServer/Common/Thread.h
+ D:/github/NewServer/NewServer/Logic/SingleTon.h
+ D:/github/NewServer/NewServer/Prec.h
+ D:/github/NewServer/NewServer/python3.7/include/Python.h
+ D:/github/NewServer/NewServer/python3.7/include/abstract.h
+ D:/github/NewServer/NewServer/python3.7/include/bltinmodule.h
+ D:/github/NewServer/NewServer/python3.7/include/boolobject.h
+ D:/github/NewServer/NewServer/python3.7/include/bytearrayobject.h
+ D:/github/NewServer/NewServer/python3.7/include/bytesobject.h
+ D:/github/NewServer/NewServer/python3.7/include/cellobject.h
+ D:/github/NewServer/NewServer/python3.7/include/ceval.h
+ D:/github/NewServer/NewServer/python3.7/include/classobject.h
+ D:/github/NewServer/NewServer/python3.7/include/code.h
+ D:/github/NewServer/NewServer/python3.7/include/codecs.h
+ D:/github/NewServer/NewServer/python3.7/include/compile.h
+ D:/github/NewServer/NewServer/python3.7/include/complexobject.h
+ D:/github/NewServer/NewServer/python3.7/include/context.h
+ D:/github/NewServer/NewServer/python3.7/include/descrobject.h
+ D:/github/NewServer/NewServer/python3.7/include/dictobject.h
+ D:/github/NewServer/NewServer/python3.7/include/dtoa.h
+ D:/github/NewServer/NewServer/python3.7/include/dynamic_annotations.h
+ D:/github/NewServer/NewServer/python3.7/include/enumobject.h
+ D:/github/NewServer/NewServer/python3.7/include/eval.h
+ D:/github/NewServer/NewServer/python3.7/include/fileobject.h
+ D:/github/NewServer/NewServer/python3.7/include/fileutils.h
+ D:/github/NewServer/NewServer/python3.7/include/floatobject.h
+ D:/github/NewServer/NewServer/python3.7/include/funcobject.h
+ D:/github/NewServer/NewServer/python3.7/include/genobject.h
+ D:/github/NewServer/NewServer/python3.7/include/import.h
+ D:/github/NewServer/NewServer/python3.7/include/intrcheck.h
+ D:/github/NewServer/NewServer/python3.7/include/iterobject.h
+ D:/github/NewServer/NewServer/python3.7/include/listobject.h
+ D:/github/NewServer/NewServer/python3.7/include/longintrepr.h
+ D:/github/NewServer/NewServer/python3.7/include/longobject.h
+ D:/github/NewServer/NewServer/python3.7/include/memoryobject.h
+ D:/github/NewServer/NewServer/python3.7/include/methodobject.h
+ D:/github/NewServer/NewServer/python3.7/include/modsupport.h
+ D:/github/NewServer/NewServer/python3.7/include/moduleobject.h
+ D:/github/NewServer/NewServer/python3.7/include/namespaceobject.h
+ D:/github/NewServer/NewServer/python3.7/include/object.h
+ D:/github/NewServer/NewServer/python3.7/include/objimpl.h
+ D:/github/NewServer/NewServer/python3.7/include/odictobject.h
+ D:/github/NewServer/NewServer/python3.7/include/osmodule.h
+ D:/github/NewServer/NewServer/python3.7/include/patchlevel.h
+ D:/github/NewServer/NewServer/python3.7/include/pyarena.h
+ D:/github/NewServer/NewServer/python3.7/include/pyatomic.h
+ D:/github/NewServer/NewServer/python3.7/include/pycapsule.h
+ D:/github/NewServer/NewServer/python3.7/include/pyconfig.h
+ D:/github/NewServer/NewServer/python3.7/include/pyctype.h
+ D:/github/NewServer/NewServer/python3.7/include/pydebug.h
+ D:/github/NewServer/NewServer/python3.7/include/pyerrors.h
+ D:/github/NewServer/NewServer/python3.7/include/pyfpe.h
+ D:/github/NewServer/NewServer/python3.7/include/pyhash.h
+ D:/github/NewServer/NewServer/python3.7/include/pylifecycle.h
+ D:/github/NewServer/NewServer/python3.7/include/pymacconfig.h
+ D:/github/NewServer/NewServer/python3.7/include/pymacro.h
+ D:/github/NewServer/NewServer/python3.7/include/pymath.h
+ D:/github/NewServer/NewServer/python3.7/include/pymem.h
+ D:/github/NewServer/NewServer/python3.7/include/pyport.h
+ D:/github/NewServer/NewServer/python3.7/include/pystate.h
+ D:/github/NewServer/NewServer/python3.7/include/pystrcmp.h
+ D:/github/NewServer/NewServer/python3.7/include/pystrtod.h
+ D:/github/NewServer/NewServer/python3.7/include/pythonrun.h
+ D:/github/NewServer/NewServer/python3.7/include/pythread.h
+ D:/github/NewServer/NewServer/python3.7/include/pytime.h
+ D:/github/NewServer/NewServer/python3.7/include/rangeobject.h
+ D:/github/NewServer/NewServer/python3.7/include/setobject.h
+ D:/github/NewServer/NewServer/python3.7/include/sliceobject.h
+ D:/github/NewServer/NewServer/python3.7/include/structseq.h
+ D:/github/NewServer/NewServer/python3.7/include/sysmodule.h
+ D:/github/NewServer/NewServer/python3.7/include/traceback.h
+ D:/github/NewServer/NewServer/python3.7/include/tupleobject.h
+ D:/github/NewServer/NewServer/python3.7/include/typeslots.h
+ D:/github/NewServer/NewServer/python3.7/include/unicodeobject.h
+ D:/github/NewServer/NewServer/python3.7/include/warnings.h
+ D:/github/NewServer/NewServer/python3.7/include/weakrefobject.h
 CMakeFiles/newserver.dir/Common/GTimer.cpp.obj
  D:/github/NewServer/NewServer/./Common/GTimer.h
  D:/github/NewServer/NewServer/./Common/Generate.h
@@ -321,6 +414,7 @@ CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj
  D:/github/NewServer/NewServer/./Logic/SingleTon.h
  D:/github/NewServer/NewServer/Common/./ObjectFactory.h
  D:/github/NewServer/NewServer/Common/Common.h
+ D:/github/NewServer/NewServer/Common/GPython.h
  D:/github/NewServer/NewServer/Common/GTimer.h
  D:/github/NewServer/NewServer/Common/Lock.h
  D:/github/NewServer/NewServer/Common/Log.h
@@ -343,6 +437,79 @@ CMakeFiles/newserver.dir/Logic/ProjectManger.cpp.obj
  D:/github/NewServer/NewServer/libevent/include/event2/thread.h
  D:/github/NewServer/NewServer/libevent/include/event2/util.h
  D:/github/NewServer/NewServer/protobuffer/player.pb.h
+ D:/github/NewServer/NewServer/python3.7/include/Python.h
+ D:/github/NewServer/NewServer/python3.7/include/abstract.h
+ D:/github/NewServer/NewServer/python3.7/include/bltinmodule.h
+ D:/github/NewServer/NewServer/python3.7/include/boolobject.h
+ D:/github/NewServer/NewServer/python3.7/include/bytearrayobject.h
+ D:/github/NewServer/NewServer/python3.7/include/bytesobject.h
+ D:/github/NewServer/NewServer/python3.7/include/cellobject.h
+ D:/github/NewServer/NewServer/python3.7/include/ceval.h
+ D:/github/NewServer/NewServer/python3.7/include/classobject.h
+ D:/github/NewServer/NewServer/python3.7/include/code.h
+ D:/github/NewServer/NewServer/python3.7/include/codecs.h
+ D:/github/NewServer/NewServer/python3.7/include/compile.h
+ D:/github/NewServer/NewServer/python3.7/include/complexobject.h
+ D:/github/NewServer/NewServer/python3.7/include/context.h
+ D:/github/NewServer/NewServer/python3.7/include/descrobject.h
+ D:/github/NewServer/NewServer/python3.7/include/dictobject.h
+ D:/github/NewServer/NewServer/python3.7/include/dtoa.h
+ D:/github/NewServer/NewServer/python3.7/include/dynamic_annotations.h
+ D:/github/NewServer/NewServer/python3.7/include/enumobject.h
+ D:/github/NewServer/NewServer/python3.7/include/eval.h
+ D:/github/NewServer/NewServer/python3.7/include/fileobject.h
+ D:/github/NewServer/NewServer/python3.7/include/fileutils.h
+ D:/github/NewServer/NewServer/python3.7/include/floatobject.h
+ D:/github/NewServer/NewServer/python3.7/include/funcobject.h
+ D:/github/NewServer/NewServer/python3.7/include/genobject.h
+ D:/github/NewServer/NewServer/python3.7/include/import.h
+ D:/github/NewServer/NewServer/python3.7/include/intrcheck.h
+ D:/github/NewServer/NewServer/python3.7/include/iterobject.h
+ D:/github/NewServer/NewServer/python3.7/include/listobject.h
+ D:/github/NewServer/NewServer/python3.7/include/longintrepr.h
+ D:/github/NewServer/NewServer/python3.7/include/longobject.h
+ D:/github/NewServer/NewServer/python3.7/include/memoryobject.h
+ D:/github/NewServer/NewServer/python3.7/include/methodobject.h
+ D:/github/NewServer/NewServer/python3.7/include/modsupport.h
+ D:/github/NewServer/NewServer/python3.7/include/moduleobject.h
+ D:/github/NewServer/NewServer/python3.7/include/namespaceobject.h
+ D:/github/NewServer/NewServer/python3.7/include/object.h
+ D:/github/NewServer/NewServer/python3.7/include/objimpl.h
+ D:/github/NewServer/NewServer/python3.7/include/odictobject.h
+ D:/github/NewServer/NewServer/python3.7/include/osmodule.h
+ D:/github/NewServer/NewServer/python3.7/include/patchlevel.h
+ D:/github/NewServer/NewServer/python3.7/include/pyarena.h
+ D:/github/NewServer/NewServer/python3.7/include/pyatomic.h
+ D:/github/NewServer/NewServer/python3.7/include/pycapsule.h
+ D:/github/NewServer/NewServer/python3.7/include/pyconfig.h
+ D:/github/NewServer/NewServer/python3.7/include/pyctype.h
+ D:/github/NewServer/NewServer/python3.7/include/pydebug.h
+ D:/github/NewServer/NewServer/python3.7/include/pyerrors.h
+ D:/github/NewServer/NewServer/python3.7/include/pyfpe.h
+ D:/github/NewServer/NewServer/python3.7/include/pyhash.h
+ D:/github/NewServer/NewServer/python3.7/include/pylifecycle.h
+ D:/github/NewServer/NewServer/python3.7/include/pymacconfig.h
+ D:/github/NewServer/NewServer/python3.7/include/pymacro.h
+ D:/github/NewServer/NewServer/python3.7/include/pymath.h
+ D:/github/NewServer/NewServer/python3.7/include/pymem.h
+ D:/github/NewServer/NewServer/python3.7/include/pyport.h
+ D:/github/NewServer/NewServer/python3.7/include/pystate.h
+ D:/github/NewServer/NewServer/python3.7/include/pystrcmp.h
+ D:/github/NewServer/NewServer/python3.7/include/pystrtod.h
+ D:/github/NewServer/NewServer/python3.7/include/pythonrun.h
+ D:/github/NewServer/NewServer/python3.7/include/pythread.h
+ D:/github/NewServer/NewServer/python3.7/include/pytime.h
+ D:/github/NewServer/NewServer/python3.7/include/rangeobject.h
+ D:/github/NewServer/NewServer/python3.7/include/setobject.h
+ D:/github/NewServer/NewServer/python3.7/include/sliceobject.h
+ D:/github/NewServer/NewServer/python3.7/include/structseq.h
+ D:/github/NewServer/NewServer/python3.7/include/sysmodule.h
+ D:/github/NewServer/NewServer/python3.7/include/traceback.h
+ D:/github/NewServer/NewServer/python3.7/include/tupleobject.h
+ D:/github/NewServer/NewServer/python3.7/include/typeslots.h
+ D:/github/NewServer/NewServer/python3.7/include/unicodeobject.h
+ D:/github/NewServer/NewServer/python3.7/include/warnings.h
+ D:/github/NewServer/NewServer/python3.7/include/weakrefobject.h
 CMakeFiles/newserver.dir/Logic/Reflector.cpp.obj
  .././Common/GTimer.h
  .././Common/Generate.h

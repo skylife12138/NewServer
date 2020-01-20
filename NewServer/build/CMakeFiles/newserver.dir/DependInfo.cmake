@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/github/NewServer/NewServer/Common/Common.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/Common.cpp.obj"
+  "D:/github/NewServer/NewServer/Common/GPython.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/GPython.cpp.obj"
   "D:/github/NewServer/NewServer/Common/GTimer.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/GTimer.cpp.obj"
   "D:/github/NewServer/NewServer/Common/Log.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/Log.cpp.obj"
   "D:/github/NewServer/NewServer/Common/MemoryPool.cpp" "D:/github/NewServer/NewServer/build/CMakeFiles/newserver.dir/Common/MemoryPool.cpp.obj"
@@ -46,6 +47,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../libevent/include"
   "../tcmalloc/inlcude"
   "../json/inlcude"
+  "../python3.7/inlcude"
   )
 
 # Targets to which this target links.

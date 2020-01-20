@@ -70,7 +70,7 @@ CMAKE_BINARY_DIR = D:\github\NewServer\NewServer\build
 CMakeFiles/newserver.dir/all:
 	$(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/depend
 	$(MAKE) -f CMakeFiles\newserver.dir\build.make CMakeFiles/newserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\github\NewServer\NewServer\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 "Built target newserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\github\NewServer\NewServer\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Built target newserver"
 .PHONY : CMakeFiles/newserver.dir/all
 
 # Include target in all.
@@ -80,7 +80,7 @@ all: CMakeFiles/newserver.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/newserver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\github\NewServer\NewServer\build\CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\github\NewServer\NewServer\build\CMakeFiles 23
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/newserver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\github\NewServer\NewServer\build\CMakeFiles 0
 .PHONY : CMakeFiles/newserver.dir/rule

@@ -4,6 +4,7 @@
 #include "../Net/NetWorkManger.h"
 #include "../Common/Common.h"
 #include "../Common/Log.h"
+#include "../Common/GPython.h"
 
 
 GProjectMgr* GProMgr = NULL;
@@ -44,7 +45,8 @@ bool GProjectMgr::Init()
 	IoThread::StaticInit();
 	ClientMgr::StaticInit();
 	CNetPackPool::StaticInit();
-	
+	GPython::StaticInit();
+
 	if(!IoThread::Instance()->Start())
 	{
 		Error("IoThread Start Error!");
@@ -67,7 +69,8 @@ bool GProjectMgr::Init()
 void GProjectMgr::Realase()
 {
 	IoThread::Instance()->Release();
-
+	
+	GPython::StaticDestory();
 	CMsgFilter::StaticDestory();
 	IoThread::StaticDestory();
 	ClientMgr::StaticDestory();
@@ -91,6 +94,7 @@ void GProjectMgr::MainLoop()
 
 	GTimer->Tick((int)GetNowTime());
 	ClientMgr::Instance()->ParseAllClient();
+	GPython::Instance()->Tick();
 
 #ifndef NET_LIB_EVENT
 	NetMgr->HandleNetMsg();

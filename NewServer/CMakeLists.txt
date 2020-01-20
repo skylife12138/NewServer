@@ -44,6 +44,7 @@ include_directories(protobuffer)#protobuffer库头文件路径
 include_directories(libevent/include)#libevent库头文件路径
 include_directories(tcmalloc/inlcude)#tcmalloc库头文件路径
 include_directories(json/inlcude)#jsoncpp库头文件路径
+include_directories(python3.7/inlcude)#python3.7库头文件路径
 
 
 ### 动态链接库或静态链接库的搜索路径
@@ -53,6 +54,7 @@ link_directories(${PROJECT_SOURCE_DIR}/protobuffer/lib)
 link_directories(${PROJECT_SOURCE_DIR}/libevent)
 link_directories(${PROJECT_SOURCE_DIR}/tcmalloc)
 link_directories(${PROJECT_SOURCE_DIR}/json)
+link_directories(${PROJECT_SOURCE_DIR}/python3.7)
 
 if(WIN32)
     set(LIBS ${LIBS} ws2_32)#wsock32)
@@ -112,6 +114,8 @@ set(src_common
   Common/Thread.cpp
   Common/Log.h 
   Common/Log.cpp 
+  Common/GPython.h 
+  Common/GPython.cpp 
 )
 
 set(src_Logic
@@ -168,4 +172,4 @@ add_executable(newserver ${SOURCE_FILES})
 #add_gcc_precompiled_header(newserver Prec.h)
 #use_gcc_precompiled_header("${SOURCE_FILES}")
 
-target_link_libraries(newserver ${LIBS} libzmq libprotobuf libevent libjsoncpp libtcmalloc_minimal)
+target_link_libraries(newserver ${LIBS} libzmq libprotobuf libevent libjsoncpp python37 libtcmalloc_minimal)

@@ -59,7 +59,7 @@ int main(int argc,char** argv)
 	ShowTCMolloc();
 	DWORD LastTickTime = TimeGetTime();
 	int Moredelta = 0;
-	while (!GProMgr->IsExit() && NowTickCount<8573888)
+	while (!GProMgr->IsExit())
 	{
 		NowTickCount = TimeGetTime();
 		RealWorldTime = GTimer->GetNowTimeStamp();
